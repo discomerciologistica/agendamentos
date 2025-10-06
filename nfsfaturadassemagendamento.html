@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NF’s faturadas sem agendamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>NF’s faturadas sem agendamento</h1>
+    <input type="text" id="searchInput" placeholder="Pesquisar...">
+    <table id="dataTable">
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+
+    <script>
+        async function carregarCSV() {
+            const response = await fetch("nfsfaturadassemagendamento.csv");
+            const data = await response.text();
+
+            const linhas = data.trim().split("\n").map(l => l.split(","));
+            const header = linhas.shift();
+
+            const thead = document.getElementById("tableHeader");
+            const tbody = document.getElementById("tableBody");
+
+            header.forEach(coluna => {
+                const th = document.createElement("th");
+                th.textContent = coluna;
+                thead.appendChild(th);
+            });
+
+            linhas.forEach(linha => {
+                const tr = document.createElement("tr");
+                linha.forEach(valor => {
+                    const td = document.createElement("td");
+                    td.textContent = valor;
+                    tr.appendChild(td);
+                });
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById("searchInput").addEventListener("input", function () {
+                const termo = this.value.toLowerCase();
+                const linhas = tbody.getElementsByTagName("tr");
+                for (let i = 0; i < linhas.length; i++) {
+                    const textoLinha = linhas[i].textContent.toLowerCase();
+                    linhas[i].style.display = textoLinha.includes(termo) ? "" : "none";
+                }
+            });
+        }
+
+        carregarCSV();
+    </script>
+</body>
+</html>

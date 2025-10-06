@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: url('fundo.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+.container {
+  text-align: center;
+  margin-top: 15vh;
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+#search {
+  padding: 10px;
+  width: 300px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#suggestions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 300px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.7);
+  border-radius: 5px;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+#suggestions li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+#suggestions li:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+table {
+  margin: 30px auto;
+  border-collapse: collapse;
+  width: 80%;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+th {
+  background: rgba(0,0,0,0.9);
+}
+.link-uf {
+  color: yellow;
+  font-weight: bold;
+  text-decoration: underline;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.link-uf:hover {
+  color: gold;
+}
+#ultimaAtualizacao {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #ffeb3b;
+  text-shadow: 1px 1px 2px black;
+}
+
+td:last-child {
+  color: #ff4444; /* vermelho vivo */
+  font-weight: bold;
+}
