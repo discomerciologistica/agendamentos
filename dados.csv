@@ -1,27 +1,11 @@
-Fabricante,Data,Codigo,Produto,Qtd,Obs
-SAMSUNG,06/10/25,30396,Controle Remoto DVM WIFI MIM-H04N - MULTI/VRF - Samsung,1,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30224,Evap K71v AM024NN1DCH - Samsung,5,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30254,Evap K7360 AM030KN4DCH - Samsung,3,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30245,Evap K74v AM036NN4DCH - Samsung,4,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30128,Evap HW12 Wind Free AM036TNVDKH C/EEV - Samsung,25,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30046,Cond DVM 06HP AM060TXMDKH Q/F 220V - Samsung,1,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30047,Cond DVM 07HP AM070TXMDKH Q/F 220V - Samsung,3,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30050,Cond DVM 10HP AM100KXMDHH Q/F 380V - Samsung,1,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30207,Painel K71v (18~24) PC1BWFMAN - Wind Free - Samsung,5,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30211,Painel K71v PC1NWFMAN - Wind Free (9-12) - Samsung,8,29/09 reagendado par o dia 06/10
-SAMSUNG,06/10/25,30206,Painel K7360 PC4NUNMAN CIRCLE - Samsung,1,29/09 reagendado par o dia 06/10
-DAIKIN,06/10/25,5174,Evap. FTHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,100,
-DAIKIN,06/10/25,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,100,
-DAIKIN,06/10/25,5175,Cond. RHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,100,
-DAIKIN,06/10/25,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,100,
-TCL,06/10/25,110005,Ar Cond. TAC-18CHTG2-INV TCL T-PRO 2.0  18 Quente,60,
-TCL,06/10/25,110202,Ar Cond. TAC-55CSG/CT-INV TCL Cassete  55 Frio,40,
-MIDEA,08/10/25,49064,Evap. 42BQA024510HC Built-in Versatile 220V M - Carrier,4,
-MIDEA,08/10/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,
-DAIKIN,07/10/25,5242,Evap K7 FCQ36AVL Sky Air - QF - Daikin,15,teste
-DAIKIN,07/10/25,5243,Cond K7 RZQ36AVL Sky Air - QF - Daikin,15,teste
+FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
+DAIKIN,07/10/25,5242,Evap K7 FCQ36AVL Sky Air - QF - Daikin,15,
+DAIKIN,07/10/25,5243,Cond K7 RZQ36AVL Sky Air - QF - Daikin,15,
 DAIKIN,07/10/25,5246,Evap K7 FCQ48AVL Sky Air - QF - Daikin,12,
 DAIKIN,07/10/25,5247,Cond K7 RZQ48AVL Sky Air - QF - Daikin,12,
+TRANE,08/10/25,10622,Controle TCONTCCM30 TVR Central - Trane,1,
+MIDEA,08/10/25,49064,Evap. 42BQA024510HC Built-in Versatile 220V M - Carrier,4,
+MIDEA,08/10/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,
 DAIKIN,08/10/25,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,20,
 DAIKIN,08/10/25,5154,Evap. FTHC12T5VL Full Inverter R-32  12 Quente - Daikin,256,
 DAIKIN,08/10/25,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,20,
@@ -32,19 +16,19 @@ DAIKIN,08/10/25,5149,Cond. RKC09T5VL Full Inverter R-32  09 Frio - Daikin,20,
 DAIKIN,08/10/25,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,20,
 DAIKIN,08/10/25,5174,Evap. FTHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,14,
 DAIKIN,08/10/25,5172,Evap. FTKP18S5VL EcoSwing Smart Gold R-32  18 Frio - Daikin,20,
-DAIKIN,08/10/25,5175,Cond. RHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,14, teste 2
+DAIKIN,08/10/25,5175,Cond. RHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,14,
 DAIKIN,08/10/25,5173,Cond. RKP18S5VL EcoSwing Smart Gold R-32  18 Frio - Daikin,20,
-MIDEA,09/10/25,40015,Cond. 38EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,
-MIDEA,09/10/25,40014,Evap. 42EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,
-MIDEA,09/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,10,
-MIDEA,09/10/25,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,10,
-MIDEA,09/10/25,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,10,
-MIDEA,09/10/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,9,
-MIDEA,09/10/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,9,
-MIDEA,09/10/25,41029,Cond. 38TVCI22S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,19,
-MIDEA,09/10/25,41028,Evap. 42AFVCI22S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,19,
-MIDEA,09/10/25,40005,Cond. 38EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,120,
-MIDEA,09/10/25,40004,Evap. 42EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,120,
+MIDEA,10/10/25,40015,Cond. 38EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,40014,Evap. 42EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,10,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,10,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,10,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,9,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,9,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,41029,Cond. 38TVCI22S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,19,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,41028,Evap. 42AFVCI22S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,19,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,40005,Cond. 38EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,120,09/10 reagendado para o dia 10/10
+MIDEA,10/10/25,40004,Evap. 42EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,120,09/10 reagendado para o dia 10/10
 DAIKIN,13/10/25,5267,Evap. DT FDMQA24A5VL - Mini SkyAir - Daikin,3,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,3,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5265,Evap. DT FDMQA18A5VL - Mini SkyAir - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
@@ -100,8 +84,30 @@ GREE,14/10/25,7187,Evap. GWH18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,205,
 GREE,14/10/25,7188,Cond. GWH18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,205,
 GREE,14/10/25,7191,Evap. GWH24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,12,
 GREE,14/10/25,7192,Cond. GWH24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,12,
-
-
-
-
-
+MIDEA,15/10/25,43022,Cond. K7 38CQVE36515MC Inverter Connect - QF R32 220V - Carrier,10,
+MIDEA,15/10/25,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,10,
+MIDEA,15/10/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,10,
+MIDEA,15/10/25,40011,Cond. 38EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,
+MIDEA,15/10/25,40010,Evap. 42EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,
+MIDEA,15/10/25,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
+MIDEA,15/10/25,40012,Evap. 42EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
+MIDEA,15/10/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,
+MIDEA,15/10/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,
+MIDEA,15/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,17,
+MIDEA,15/10/25,40001,Cond. 38EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,
+MIDEA,15/10/25,40000,Evap. 42EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,
+MIDEA,15/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,5,
+MIDEA,15/10/25,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,17,
+MIDEA,15/10/25,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,17,
+MIDEA,15/10/25,41021,Cond. 38TVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,
+MIDEA,15/10/25,41020,Evap. 42AFVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,
+MIDEA,15/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,12,
+MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,12,
+MIDEA,15/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,
+MIDEA,15/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,
+MIDEA,15/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,
+MIDEA,15/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,
+MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,
+MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,12,
+MIDEA,15/10/25,4669,Cond. K7 38TVQD24515MC 220v Inverter QF - Carrier,60,
+MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,
