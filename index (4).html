@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>AGENDAMENTOS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>AGENDAMENTOS</h1>
+
+    <p>
+  <a href="CALENDARIO.jpeg" target="_blank" class="botao-menu">CALENDÁRIO</a>
+</p>
+
+<div class="link-container" style="margin-top: 20px;">
+  <a href="nfsfaturadassemagendamento.html" target="_blank" class="botao-menu">
+    NF’S FATURADAS SEM AGENDAMENTO
+  </a>
+</div>
+    <div style="margin-bottom: 15px;"></div>
+
+    <!-- Campos de pesquisa -->
+  <p> 
+    <input type="text" id="searchFabricante" placeholder="Pesquisar Fabricante..." autocomplete="off">
+    <ul id="suggestionsFabricante" class="suggestions"></ul>
+
+    <input type="text" id="searchCodigo" placeholder="Pesquisar Código..." autocomplete="off">
+    <ul id="suggestionsCodigo" class="suggestions"></ul>
+
+    <input type="text" id="searchProduto" placeholder="Pesquisar Produto..." autocomplete="off">
+    <ul id="suggestionsProduto" class="suggestions"></ul>
+  </p>
+    <table id="results">
+      <thead>
+        <tr>
+          <th>Fabricante</th>
+          <th>Data</th>
+          <th>Código</th>
+          <th>Produto</th>
+          <th>Qtd</th>
+          <th>Obs</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    
+    <p id="ultimaAtualizacao">Última atualização: --</p>
+  </div>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
