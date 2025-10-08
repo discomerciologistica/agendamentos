@@ -1,3 +1,64 @@
+@media(max-width: 600px){
+	body{
+		padding: 10px;
+	}
+	.container {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding: 0 10px;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* reduz tamanho da fonte */
+    margin-bottom: 4vh;
+  }
+
+  #searchInput {
+    width: 100%; /* ocupa toda a largura disponível */
+    max-width: 100%;
+    font-size: 14px;
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Ajuste para o dropdown sugestões, se usar */
+  #suggestions {
+    max-width: 100%;
+    left: 0;
+    right: 0;
+  }
+  
+   .table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
+  }
+	
+	
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -126,7 +187,7 @@ td:last-child {
   font-family: sans-serif;
   padding: 12px 20px;
   border-radius: 8px;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.3s, color 0.3s;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
   text-align: center;
   word-break: break-word;
