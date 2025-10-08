@@ -1,6 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-MIDEA,08/10/25,49064,Evap. 42BQA024510HC Built-in Versatile 220V M - Carrier,4,
-MIDEA,08/10/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,
 MIDEA,10/10/25,40015,Cond. 38EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,09/10 reagendado para o dia 10/10
 MIDEA,10/10/25,40014,Evap. 42EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,100,09/10 reagendado para o dia 10/10
 MIDEA,10/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,10,09/10 reagendado para o dia 10/10
@@ -16,11 +14,11 @@ DAIKIN,13/10/25,5267,Evap. DT FDMQA24A5VL - Mini SkyAir - Daikin,3,09/10/2025 re
 DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,3,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5265,Evap. DT FDMQA18A5VL - Mini SkyAir - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5263,Evap. K71v FKQA24A5VL - Mini SkyAir - Daikin,15,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5262,Cond. K71v RZAQ18BVL - Mini SkyAir - Daikin ,5,09/10/2025 reagendado para o dia 13/10/2025
+DAIKIN,13/10/25,5266,Cond. DT RZAQ18BVL - Mini SkyAir - Daikin ,5,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,15,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5267,Evap. DT FDMQA24A5VL - Mini SkyAir - Daikin,6,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5263,Evap. K71v FKQA24A5VL - Mini SkyAir - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,30,09/10/2025 reagendado para o dia 13/10/2025
+DAIKIN,13/10/25,5264,Cond. K71v RZAQ24BVL - Mini SkyAir - Daikin ,30,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,6,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5174,Evap. FTHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,36,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5175,Cond. RHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,36,09/10/2025 reagendado para o dia 13/10/2025
@@ -121,6 +119,6 @@ MIDEA,15/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,
 MIDEA,15/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,
 MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,
 MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,12,
-MIDEA,15/10/25,4669,Cond. K7 38TVQD24515MC 220v Inverter QF - Carrier,60,
+MIDEA,15/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,60,
 MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,
 TCL,17/10/25,110003,Ar Cond. TAC-12CHTG2-INV TCL T-PRO 2.0  12 Quente,40,
