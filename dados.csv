@@ -33,10 +33,6 @@ DAIKIN,13/10/25,5262,Cond. K71v RZAQ18BVL - Mini SkyAir - Daikin ,30,09/10/2025 
 DAIKIN,13/10/25,5241,Cond K7 RZQ30AVL Sky Air - QF - Daikin,40,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5245,Cond K7 RZQ42AVL Sky Air - QF - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,13/10/25,5247,Cond K7 RZQ48AVL Sky Air - QF - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
-GREE,13/10/25,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,61,
-GREE,13/10/25,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,61,
-GREE,13/10/25,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,357,
-GREE,13/10/25,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,357,
 GREE,13/10/25,7619,Evap. PT GULD57ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,89,
 GREE,13/10/25,7620,Cond. PT GULD56W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,89,
 GREE,13/10/25,7724,Evap K7 GULD24T1/A-SAI G-Prime Inverter Compact IA R32 Frio 220V - Gree,25,
@@ -88,12 +84,6 @@ DAIKIN,14/10/25,5508,Cond. 4MXS34PMVM - MULTI - Q/F - Daikin,34,10/10/2025 reage
 DAIKIN,14/10/25,5527,Evap. HW18  CTXS18PMVM - Daikin,50,10/10/2025 reagendado para o dia 14/10/2025
 GREE,14/10/25,7619,Evap. PT GULD57ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,109,
 GREE,14/10/25,7620,Cond. PT GULD56W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,109,
-GREE,14/10/25,7078,Evap. GWC12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,83,
-GREE,14/10/25,7079,Cond. GWC12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,83,
-GREE,14/10/25,7187,Evap. GWH18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,205,
-GREE,14/10/25,7188,Cond. GWH18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,205,
-GREE,14/10/25,7191,Evap. GWH24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,12,
-GREE,14/10/25,7192,Cond. GWH24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,12,
 MIDEA,15/10/25,43022,Cond. K7 38CQVE36515MC Inverter Connect - QF R32 220V - Carrier,10,
 MIDEA,15/10/25,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,10,
 MIDEA,15/10/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,10,
@@ -121,4 +111,14 @@ MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,
 MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,12,
 MIDEA,15/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,60,
 MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,
+GREE,16/10/25,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,61,13/10 reagendado para o dia 16/10
+GREE,16/10/25,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,61,13/10 reagendado para o dia 16/10
+GREE,16/10/25,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,357,13/10 reagendado para o dia 16/10
+GREE,16/10/25,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,357,13/10 reagendado para o dia 16/10
+GREE,16/10/25,7078,Evap. GWC12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,83,14/10 reagendado para o dia 16/10
+GREE,16/10/25,7079,Cond. GWC12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,83,14/10 reagendado para o dia 16/10
+GREE,16/10/25,7187,Evap. GWH18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,205,14/10 reagendado para o dia 16/10
+GREE,16/10/25,7188,Cond. GWH18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,205,14/10 reagendado para o dia 16/10
+GREE,16/10/25,7191,Evap. GWH24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,12,14/10 reagendado para o dia 16/10
+GREE,16/10/25,7192,Cond. GWH24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,12,14/10 reagendado para o dia 16/10
 TCL,17/10/25,110003,Ar Cond. TAC-12CHTG2-INV TCL T-PRO 2.0  12 Quente,40,
