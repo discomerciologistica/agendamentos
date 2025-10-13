@@ -1,27 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-DAIKIN,13/10/25,5267,Evap. DT FDMQA24A5VL - Mini SkyAir - Daikin,3,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,3,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5265,Evap. DT FDMQA18A5VL - Mini SkyAir - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5263,Evap. K71v FKQA24A5VL - Mini SkyAir - Daikin,15,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5266,Cond. DT RZAQ18BVL - Mini SkyAir - Daikin ,5,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,15,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5267,Evap. DT FDMQA24A5VL - Mini SkyAir - Daikin,6,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5263,Evap. K71v FKQA24A5VL - Mini SkyAir - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5264,Cond. K71v RZAQ24BVL - Mini SkyAir - Daikin ,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5268,Cond. DT RZAQ24BVL - Mini SkyAir - Daikin ,6,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5174,Evap. FTHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,36,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5175,Cond. RHP18S5VL EcoSwing Smart Gold R-32  18 Quente - Daikin,36,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5529,Evap. HW24  CTXS24PMVM  - Daikin,50,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5261,Evap. K71v FKQA18A5VL - Mini SkyAir - Daikin,15,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5262,Cond. K71v RZAQ18BVL - Mini SkyAir - Daikin ,15,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5240,Evap K7 FCQ30AVL Sky Air - QF - Daikin,40,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5244,Evap K7 FCQ42AVL Sky Air - QF - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5246,Evap K7 FCQ48AVL Sky Air - QF - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5261,Evap. K71v FKQA18A5VL - Mini SkyAir - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5262,Cond. K71v RZAQ18BVL - Mini SkyAir - Daikin ,30,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5241,Cond K7 RZQ30AVL Sky Air - QF - Daikin,40,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5245,Cond K7 RZQ42AVL Sky Air - QF - Daikin,5,09/10/2025 reagendado para o dia 13/10/2025
-DAIKIN,13/10/25,5247,Cond K7 RZQ48AVL Sky Air - QF - Daikin,30,09/10/2025 reagendado para o dia 13/10/2025
 DAIKIN,14/10/25,5513,Cond. 2MXC18RMVM p/ R32- MULTI - Q/F - Daikin,63,10/10/2025 reagendado para o dia 14/10/2025
 DAIKIN,14/10/25,5530,Evap. HW09  CTXC09RMVM p/ R32 - Daikin,160,10/10/2025 reagendado para o dia 14/10/2025
 DAIKIN,14/10/25,5514,Cond. 3MKC18S5VL p/ R32 - MULTI - Frio - Daikin,100,10/10/2025 reagendado para o dia 14/10/2025
@@ -77,6 +54,8 @@ GREE,16/10/25,7188,Cond. GWH18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,205,14/
 GREE,16/10/25,7191,Evap. GWH24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,12,14/10 reagendado para o dia 16/10
 GREE,16/10/25,7192,Cond. GWH24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,12,14/10 reagendado para o dia 16/10
 DAIKIN,16/10/25,5533,Evap. HW12 CTKC12S5VL p/ R32 - Frio - Daikin,254,
+TRANE,16/10/25,10424,Cond. 10HP 4TVH0096K8000AA TVR Connect 220V Q/F - Trane,1,
+TRANE,16/10/25,10419,Cond. 24HP 4TVY0229H8000AA TVR Pro 220V Frio - Trane,2,
 TCL,17/10/25,110003,Ar Cond. TAC-12CHTG2-INV TCL T-PRO 2.0  12 Quente,40,
 MIDEA,22/10/25,49092,Cond. 38CQU060235 Built-in Versatile Quente 380V T - Carrier,5,
 MIDEA,22/10/25,40003,Cond. 38EZVQA09M5 Inverter AI Ecomaster (R32) Q/F - Midea,300,
