@@ -1,31 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-MIDEA,15/10/25,43022,Cond. K7 38CQVE36515MC Inverter Connect - QF R32 220V - Carrier,10,
-MIDEA,15/10/25,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,10,
-MIDEA,15/10/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,10,
-MIDEA,15/10/25,40011,Cond. 38EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,
-MIDEA,15/10/25,40010,Evap. 42EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,
-MIDEA,15/10/25,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
-MIDEA,15/10/25,40012,Evap. 42EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
-MIDEA,15/10/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,
-MIDEA,15/10/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,
-MIDEA,15/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,17,
-MIDEA,15/10/25,40001,Cond. 38EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,
-MIDEA,15/10/25,40000,Evap. 42EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,
-MIDEA,15/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,5,
-MIDEA,15/10/25,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,17,
-MIDEA,15/10/25,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,17,
-MIDEA,15/10/25,41021,Cond. 38TVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,
-MIDEA,15/10/25,41020,Evap. 42AFVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,
-MIDEA,15/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,12,
-MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,12,
-MIDEA,15/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,
-MIDEA,15/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,
-MIDEA,15/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,
-MIDEA,15/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,
-MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,
-MIDEA,15/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,12,
-MIDEA,15/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,60,
-MIDEA,15/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,
 GREE,16/10/25,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,61,13/10 reagendado para o dia 16/10
 GREE,16/10/25,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,61,13/10 reagendado para o dia 16/10
 GREE,16/10/25,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,357,13/10 reagendado para o dia 16/10
@@ -53,6 +26,33 @@ TRANE,16/10/25,10928,Evap. DT 4MXD6524G1000AA 24 Q/F 220v - Trane,3,
 TRANE,16/10/25,10903,Cond. PT 4TXK6524G1000AA 24 Q/F 220v - Trane,3,
 TRANE,16/10/25,10930,Evap. DT 4MXD6536G1000BA 36 Q/F 220v - Trane,1,
 TRANE,16/10/25,10905,Cond. PT 4TXK6536G1000AA 36 Q/F 220v  M - Trane,1,
+MIDEA,17/10/25,43022,Cond. K7 38CQVE36515MC Inverter Connect - QF R32 220V - Carrier,10,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,10,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,10,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40011,Cond. 38EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40010,Evap. 42EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,30,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40012,Evap. 42EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,91,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,17,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40001,Cond. 38EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,40000,Evap. 42EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,300,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4685,Grelha K71v 40KWOBS p/ 12.000 ,5,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,17,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,17,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,41021,Cond. 38TVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,41020,Evap. 42AFVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,100,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,12,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,12,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,60,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4948,Cond. 38AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4947,Evap. 42AGVCC30M5 Inverter Xtreme Save Connect FRIO - Midea,39,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4686,Grelha K71v 40KWOBL p/ 18-24,12,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4694,Cond. K71v 38TVQD24515MC 220v Inverter QF - Carrier,60,15/10 reagendado para o dia 17/10
+MIDEA,17/10/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,15/10 reagendado para o dia 17/10
 TCL,17/10/25,110003,Ar Cond. TAC-12CHTG2-INV TCL T-PRO 2.0  12 Quente,40,
 MIDEA,22/10/25,49092,Cond. 38CQU060235 Built-in Versatile Quente 380V T - Carrier,5,
 MIDEA,22/10/25,40003,Cond. 38EZVQA09M5 Inverter AI Ecomaster (R32) Q/F - Midea,300,
@@ -116,6 +116,10 @@ MIDEA,24/10/25,49075,Evap. 42BQA048510HC Built-in Versatile T - Carrier,6,
 MIDEA,24/10/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,6,
 MIDEA,24/10/25,49060,Evap. 42BQA018510HC Built-in Versatile 220V M - Carrier,5,
 MIDEA,24/10/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,
+GREE,24/10/25,7619,Evap. PT GULD57ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,102,
+GREE,24/10/25,7620,Cond. PT GULD56W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,102,
+GREE,24/10/25,7189,Evap. GWC24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,5,
+GREE,24/10/25,7190,Cond. GWC24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,5,
 DAIKIN,31/10/25,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,87,
 DAIKIN,31/10/25,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,87,
 DAIKIN,31/10/25,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,73,
