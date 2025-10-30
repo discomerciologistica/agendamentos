@@ -1,23 +1,10 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-LG,30/10/25,2483,Cond. K74v ZTUQ36GNLAA.ANWBRZ1 Leve Inverter R32 Frio - LG,10,29/10 reagendado para 30/10
-LG,30/10/25,2482,Evap. K74v ZTNQ36GNLAA.ANWBRZ1 c/ Painel Leve Inverter R32 Frio  - LG,10,29/10 reagendado para 30/10
-LG,30/10/25,2477,Cond. K7-360 ATUW60GYLP1 Inverter Q/F - LG,9,29/10 reagendado para 30/10
-LG,30/10/25,2476,Evap. K7-360 ATNW60GYLP1 c/ Painel Inverter Q/F - LG,9,29/10 reagendado para 30/10
-LG,30/10/25,2486,Evap. K74v ZTNQ48GMLAA.ANWBRZ1 c/ Painel Leve Inverter R32 Frio  - LG,13,29/10 reagendado para 30/10
-LG,30/10/25,2487,Cond. K74v ZTUQ48GMLAA.ANWBRZ1 Leve Inverter R32 Frio - LG,13,29/10 reagendado para 30/10
-LG,30/10/25,2161,Evap. S3NW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,60,
-LG,30/10/25,2162,Cond. S3UW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,60,
-LG,30/10/25,2174,Evap. S3NW18KL31A - DUAL Inverter Voice +IA (R32) Q/F - LG,60,
-LG,30/10/25,2175,Cond. S3UW18KL31A - DUAL Inverter Voice +IA (R32) Q/F - LG,60,
-LG,30/10/25,2163,Evap. S3NQ09AM31A - DUAL Inv. Voice Bi-Split +AI (R-32) c/ Wi-Fi - Frio - LG,50,
-LG,30/10/25,2163,Evap. S3NQ09AM31A - DUAL Inv. Voice Bi-Split +AI (R-32) c/ Wi-Fi - Frio - LG,50,
-LG,30/10/25,2165,Cond. S32Q16UAGA0 - DUAL Inverter Voice Bi-Split +AI (R-32) - Frio - LG,50,
-DAIKIN,31/10/25,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,87,
-DAIKIN,31/10/25,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,87,
-DAIKIN,31/10/25,5512,Cond. 2MXS18PMVM - MULTI - Q/F - Daikin,4,
-DAIKIN,31/10/25,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,7,
-DAIKIN,31/10/25,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,10,
-DAIKIN,31/10/25,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,10,
+LG,31/10/25,2483,Cond. K74v ZTUQ36GNLAA.ANWBRZ1 Leve Inverter R32 Frio - LG,10,29/10 reagendado para 31/10
+LG,31/10/25,2482,Evap. K74v ZTNQ36GNLAA.ANWBRZ1 c/ Painel Leve Inverter R32 Frio  - LG,10,29/10 reagendado para 31/10
+LG,31/10/25,2477,Cond. K7-360 ATUW60GYLP1 Inverter Q/F - LG,9,29/10 reagendado para 31/10
+LG,31/10/25,2476,Evap. K7-360 ATNW60GYLP1 c/ Painel Inverter Q/F - LG,9,29/10 reagendado para 31/10
+LG,31/10/25,2486,Evap. K74v ZTNQ48GMLAA.ANWBRZ1 c/ Painel Leve Inverter R32 Frio  - LG,13,29/10 reagendado para 31/10
+LG,31/10/25,2487,Cond. K74v ZTUQ48GMLAA.ANWBRZ1 Leve Inverter R32 Frio - LG,13,29/10 reagendado para 31/10
 LG,31/10/25,2596,Cond. Z4UW30GFB1 - R32 - MULTI - Q/F - LG,100,
 LG,31/10/25,2567,Evap. HW AMNW09GSAA1 - MULTI - Q/F - LG,500,
 LG,31/10/25,2568,Evap. HW AMNW12GSJA1 - MULTI - Q/F - LG,200,
@@ -96,23 +83,3 @@ GREE,03/11/25,7240,Painel K71v TD01 Multi - Gree,125,
 GREE,03/11/25,7787,Evap. K71v GKC22DA-D6DNA1A/I G-Línea Inverter  R32 220V Frio - Gree,60,
 GREE,03/11/25,7788,Cond. K71v GWC22ATE-D6DNA1AK/O G-Línea Inverter R32 220V Frio - Gree,60,
 GREE,03/11/25,7240,Painel K71v TD01 Multi - Gree,60,
-GREE,00/01/00,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,263,
-GREE,00/01/00,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,263,
-GREE,00/01/00,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,122,
-GREE,00/01/00,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,122,
-GREE,00/01/00,7189,Evap. GWC24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,23,
-GREE,00/01/00,7190,Cond. GWC24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,23,
-GREE,00/01/00,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,130,
-GREE,00/01/00,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,130,
-GREE,00/01/00,7185,Evap. GWC18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,167,
-GREE,00/01/00,7186,Cond. GWC18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,167,
-GREE,00/01/00,7185,Evap. GWC18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,84,
-GREE,00/01/00,7186,Cond. GWC18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,84,
-GREE,00/01/00,7189,Evap. GWC24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,45,
-GREE,00/01/00,7190,Cond. GWC24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,45,
-GREE,00/01/00,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,175,
-GREE,00/01/00,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,175,
-GREE,00/01/00,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,193,
-GREE,00/01/00,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,193,
-GREE,00/01/00,7617,Evap. PT GULD36ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,65,
-GREE,00/01/00,7618,Cond. PT GULD36W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,65,
