@@ -1,27 +1,34 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-GREE,03/11/25,7787,Evap. K71v GKC22DA-D6DNA1A/I G-Línea Inverter  R32 220V Frio - Gree,90,
-GREE,03/11/25,7788,Cond. K71v GWC22ATE-D6DNA1AK/O G-Línea Inverter R32 220V Frio - Gree,90,
-GREE,03/11/25,7240,Painel K71v TD01 Multi - Gree,90,
-GREE,03/11/25,7724,Evap K7 GULD24T1/A-SAI G-Prime Inverter Compact IA R32 Frio 220V - Gree,16,
-GREE,03/11/25,7725,Cond K7 GULD24W1/NhA-S G-Prime Inverter Compact IA R32 Frio 220V - Gree,16,
-GREE,03/11/25,7721,Painel K7 TF08A IA G-Prime Inverter Compact IA - Gree,16,
-GREE,03/11/25,7783,Evap. K71v GKC12DA-D6DNA1A/I G-Línea Inverter  R32 220V Frio - Gree,30,
-GREE,03/11/25,7784,Cond. K71v GWC12ATB-D6DNA2AK/O G-Línea Inverter R32 220V Frio - Gree,30,
-GREE,03/11/25,7240,Painel K71v TD01 Multi - Gree,30,
-GREE,03/11/25,7191,Evap. GWH24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,18,
-GREE,03/11/25,7192,Cond. GWH24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,18,
-GREE,03/11/25,7193,Evap. GWC30ATEXF-S6DNA1A/I - G-Top Auto Inverter - Gree,23,
-GREE,03/11/25,7194,Cond. GWC30ATEXF-S6DNA1A/O - G-Top Auto Inverter - Gree,23,
-MIDEA,10/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,
-MIDEA,10/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,
-MIDEA,10/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,
-MIDEA,10/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,
-MIDEA,10/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,
-MIDEA,10/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,
-MIDEA,10/11/25,49075,Evap. 42BQA048510HC Built-in Versatile T - Carrier,4,
-MIDEA,10/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,
-MIDEA,10/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,
-MIDEA,10/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,
+GREE,04/11/25,7617,Evap. PT GULD36ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,65,
+GREE,04/11/25,7618,Cond. PT GULD36W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,65,
+GREE,04/11/25,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,263,
+GREE,04/11/25,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,263,
+GREE,04/11/25,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,122,
+GREE,04/11/25,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,122,
+GREE,04/11/25,7189,Evap. GWC24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,23,
+GREE,04/11/25,7190,Cond. GWC24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,23,
+GREE,04/11/25,7197,Evap. GWH09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,130,
+GREE,04/11/25,7198,Cond. GWH09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,130,
+GREE,04/11/25,7185,Evap. GWC18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,167,
+GREE,04/11/25,7186,Cond. GWC18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,167,
+GREE,04/11/25,7185,Evap. GWC18ATD-D6DNA1A/I - G-Top Auto Inverter - Gree,84,
+GREE,04/11/25,7186,Cond. GWC18ATD-D6DNA1A/O - G-Top Auto Inverter - Gree,84,
+GREE,04/11/25,7189,Evap. GWC24ATE-D6DNA1A/I - G-Top Auto Inverter - Gree,45,
+GREE,04/11/25,7190,Cond. GWC24ATE-D6DNA1A/O - G-Top Auto Inverter - Gree,45,
+GREE,04/11/25,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,175,
+GREE,04/11/25,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,175,
+GREE,04/11/25,7183,Evap. GWH12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,193,
+GREE,04/11/25,7184,Cond. GWH12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,193,
+MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49075,Evap. 42BQA048510HC Built-in Versatile T - Carrier,4,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,10/11/2025 antecipado para o dia 07/11
+MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,10/11/2025 antecipado para o dia 07/11
 MIDEA,11/11/25,4663,Grelha K7 40KWFSB p/ 18.000,12,
 MIDEA,11/11/25,4665,Cond. K7 38TVCD18515MC 220v Inverter Frio - Carrier,12,
 MIDEA,11/11/25,4664,Evap. K7 40KVQD18C5 Inverter - Carrier,12,
