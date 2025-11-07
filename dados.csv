@@ -1,14 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,5,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,5,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49075,Evap. 42BQA048510HC Built-in Versatile T - Carrier,4,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,4,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49088,Evap. 42BQA060510HC Built-in Versatile T - Carrier,10,10/11/2025 antecipado para o dia 07/11
-MIDEA,07/11/25,49022,Kit Controle K42BC5LC Built-In s/ fio ,10,10/11/2025 antecipado para o dia 07/11
 MIDEA,11/11/25,4663,Grelha K7 40KWFSB p/ 18.000,12,
 MIDEA,11/11/25,4665,Cond. K7 38TVCD18515MC 220v Inverter Frio - Carrier,12,
 MIDEA,11/11/25,4664,Evap. K7 40KVQD18C5 Inverter - Carrier,12,
@@ -57,3 +47,41 @@ DAIKIN,14/11/25,5254,Evap DT FBQ48AVL Sky Air - QF - Daikin,1,
 DAIKIN,14/11/25,5255,Cond DT RZQ48AVL Sky Air - QF - Daikin,1,
 DAIKIN,14/11/25,5254,Evap DT FBQ48AVL Sky Air - QF - Daikin,10,
 DAIKIN,14/11/25,5255,Cond DT RZQ48AVL Sky Air - QF - Daikin,10,
+MIDEA,17/11/25,40015,Cond. 38EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,60,
+MIDEA,17/11/25,40014,Evap. 42EZVQA24M5 Inverter AI Ecomaster (R32) Q/F - Midea,60,
+MIDEA,17/11/25,4663,Grelha K7 40KWFSB p/ 18.000,12,
+MIDEA,17/11/25,4666,Cond. K7 38TVQD18515MC 220v Inverter QF - Carrier,12,
+MIDEA,17/11/25,4664,Evap. K7 40KVQD18C5 Inverter - Carrier,12,
+MIDEA,17/11/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,6,
+MIDEA,17/11/25,41025,Cond. 38TVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,50,
+MIDEA,17/11/25,41024,Evap. 42AFVCI18S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,50,
+MIDEA,17/11/25,4672,Cond. K7 38TVQD28515MC 220v Inverter QF - Carrier,6,
+MIDEA,17/11/25,4670,Evap. K7 40KVQD28C5 Inverter - Carrier,6,
+MIDEA,17/11/25,4668,Cond. K7 38TVCD24515MC 220v Inverter Frio - Carrier,20,
+MIDEA,17/11/25,4667,Evap. K7 40KVQD24C5 Inverter - Carrier,20,
+MIDEA,17/11/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,10,
+MIDEA,17/11/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,20,
+MIDEA,17/11/25,43024,Cond. K7 38CCVE48515MC Inverter Connect - Frio R32 220V - Carrier,10,
+MIDEA,17/11/25,43023,Evap. K7 40KVQE48C5 Inverter Connect - R32 220V - Carrier,10,
+MIDEA,17/11/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,20,
+MIDEA,17/11/25,43024,Cond. K7 38CCVE48515MC Inverter Connect - Frio R32 220V - Carrier,20,
+MIDEA,17/11/25,43023,Evap. K7 40KVQE48C5 Inverter Connect - R32 220V - Carrier,20,
+MIDEA,17/11/25,43012,Cond. K7 38CCVE36515MM Inverter Connect - Frio R32 220V - Midea,15,
+MIDEA,17/11/25,43011,Evap. K7 40KVQE36M5 Inverter Connect - Frio R32 220V - Midea,15,
+MIDEA,17/11/25,43002,Cond. K7 38TVCD24515MM Inverter - Frio 220V - Midea,15,
+MIDEA,17/11/25,43001,Evap. K7 40KVQD24M5 Inverter - Midea,15,
+MIDEA,17/11/25,4693,Cond. K71v 38TVCD24515MC 220v Inverter Frio - Carrier,60,
+MIDEA,17/11/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,60,
+MIDEA,17/11/25,4693,Cond. K71v 38TVCD24515MC 220v Inverter Frio - Carrier,40,
+MIDEA,17/11/25,4692,Evap. K71v 40KVQOD24C5 Inverter - Carrier,40,
+MIDEA,17/11/25,43021,Cond. K7 38CCVE36515MC Inverter Connect - Frio R32 220V - Carrier,15,
+MIDEA,17/11/25,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,15,
+MIDEA,17/11/25,4065,Grelha K7 40KWFLB (22-60) Inverter ,15,
+MIDEA,17/11/25,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,15,
+MIDEA,17/11/25,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,15,
+MIDEA,17/11/25,4686,Grelha K71v 40KWOBL p/ 18-24,60,
+MIDEA,17/11/25,4686,Grelha K71v 40KWOBL p/ 18-24,40,
+GREE,17/11/25,7078,Evap. GWC12ATC-D6DNA1A/I - G-Top Auto Inverter - Gree,367,
+GREE,17/11/25,7079,Cond. GWC12ATC-D6DNA1A/O - G-Top Auto Inverter - Gree,367,
+GREE,17/11/25,7193,Evap. GWC30ATEXF-S6DNA1A/I - G-Top Auto Inverter - Gree,9,
+GREE,17/11/25,7194,Cond. GWC30ATEXF-S6DNA1A/O - G-Top Auto Inverter - Gree,9,
