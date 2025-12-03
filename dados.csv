@@ -1,35 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-MIDEA,02/12/25,41021,Cond. 38TVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,20,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,41020,Evap. 42AFVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,20,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,40005,Cond. 38EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,49,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,40004,Evap. 42EZVCA12M5 Inverter AI Ecomaster (R32) FRIO - Midea,49,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,41017,Cond. 38TVCI09S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,28,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,41016,Evap. 42AFVCI09S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,28,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,41021,Cond. 38TVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,40,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,41020,Evap. 42AFVCI12S5 Inverter AirVolution Connect (R32) FRIO - Springer Midea,40,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,4592,Cond. Teto 38CCL090235MC Xperience FRIO 380V Trif. - Carrier,2,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,4590,Evap. Teto 42ZQA80C5 - Xperience - Carrier,2,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,40011,Cond. 38EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,50,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,40010,Evap. 42EZVQA18M5 Inverter AI Ecomaster (R32) Q/F - Midea,50,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,44032,Cond. Teto 38CQVE30515MC Xpower Inverter Connect - QF R32 220V - Carrier,1,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,44030,Evap. Teto 42ZQVE30C5 Xpower Inverter Connect - R32 220V - Carrier,1,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,49092,Cond. 38CQU060235 Built-in Versatile Quente 380V T - Carrier,7,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,44040,Cond. Teto 38CCVE60515MC Xpower Inverter Connect - Frio R32 220V - Carrier,47,28/11 reagendado para o dia 02/12
-MIDEA,02/12/25,44039,Evap. Teto 42ZQVE60C5 Xpower Inverter Connect - R32 220V - Carrier,47,28/11 reagendado para o dia 02/12
-DAIKIN,03/12/25,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,30,
-DAIKIN,03/12/25,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,6,
-DAIKIN,03/12/25,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,30,
-DAIKIN,03/12/25,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,6,
-DAIKIN,03/12/25,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,42,
-DAIKIN,03/12/25,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,42,
-DAIKIN,03/12/25,5502,Cond. 4MXS28PMVM - MULTI - Q/F - Daikin,38,
-DAIKIN,03/12/25,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,
-DAIKIN,03/12/25,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,
-DAIKIN,03/12/25,5531,Evap. HW12  CTXC12RMVM p/ R32 - Daikin,40,
-DAIKIN,03/12/25,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,9,
-DAIKIN,03/12/25,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,9,
-DAIKIN,03/12/25,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,28,
-DAIKIN,03/12/25,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,28,
 TCL,05/12/25,110103,Ar Cond. TAC-55CSGS/CF-INV TCL Piso Teto  55 Frio,2,
 TCL,05/12/25,110001,Ar Cond. TAC-09CHTG2-INV TCL T-PRO 2.0  09 Quente,100,
 TCL,05/12/25,110200,Ar Cond. TAC-24CHSG/CT-INV TCL Cassete  24 Quente,56,
