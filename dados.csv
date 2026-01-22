@@ -1,43 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-DAIKIN,21/01/26,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,59,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,59,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5152,Evap. FTKC12T5VL Full Inverter R-32  12 Frio - Daikin,5,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,5,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5525,Evap. HW09  CTXS09PMVM - Daikin,300,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,85,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5152,Evap. FTKC12T5VL Full Inverter R-32  12 Frio - Daikin,85,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5149,Cond. RKC09T5VL Full Inverter R-32  09 Frio - Daikin,85,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,85,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,73,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,73,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,109,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5152,Evap. FTKC12T5VL Full Inverter R-32  12 Frio - Daikin,109,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5149,Cond. RKC09T5VL Full Inverter R-32  09 Frio - Daikin,109,20/01 reagendado para 21/01
-DAIKIN,21/01/26,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,109,20/01 reagendado para 21/01
-MIDEA,22/01/26,4950,Cond. 38AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,60,
-MIDEA,22/01/26,4949,Evap. 42AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,60,
-MIDEA,22/01/26,4688,Cond. K71v 38TVQD12515MC 220v Inverter QF - Carrier,13,
-MIDEA,22/01/26,4687,Evap. K71v 40KVQOD12C5 Inverter - Carrier,13,
-MIDEA,22/01/26,4669,Cond. K7 38TVQD24515MC 220v Inverter QF - Carrier,5,
-MIDEA,22/01/26,4667,Evap. K7 40KVQD24C5 Inverter - Carrier,5,
-MIDEA,22/01/26,44032,Cond. Teto 38CQVE30515MC Xpower Inverter Connect - QF R32 220V - Carrier,2,
-MIDEA,22/01/26,44030,Evap. Teto 42ZQVE30C5 Xpower Inverter Connect - R32 220V - Carrier,2,
-MIDEA,22/01/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,5,
-MIDEA,22/01/26,4950,Cond. 38AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,3,
-MIDEA,22/01/26,4949,Evap. 42AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,3,
-MIDEA,22/01/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,113,
-MIDEA,22/01/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,113,
-MIDEA,22/01/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,70,
-MIDEA,22/01/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,70,
-MIDEA,22/01/26,4685,Grelha K71v 40KWOBS p/ 12.000 ,13,
-MIDEA,22/01/26,44032,Cond. Teto 38CQVE30515MC Xpower Inverter Connect - QF R32 220V - Carrier,1,
-MIDEA,22/01/26,44030,Evap. Teto 42ZQVE30C5 Xpower Inverter Connect - R32 220V - Carrier,1,
-TCL,22/01/26,110004,Ar Cond. TAC-18CTG2-INV TCL T-PRO 2.0  18 Frio,194,
-TCL,22/01/26,110004,Ar Cond. TAC-18CTG2-INV TCL T-PRO 2.0  18 Frio,21,
-TCL,22/01/26,110102,Ar Cond. TAC-36CSGS/CF-INV TCL Piso Teto  36 Frio,30,
-TCL,22/01/26,110205,Ar Cond. TAC-36CSGS/CT-INV TCL Cassete  36 Frio,15,
-TCL,22/01/26,110005,Ar Cond. TAC-18CHTG2-INV TCL T-PRO 2.0  18 Quente,20,
-TCL,22/01/26,110001,Ar Cond. TAC-09CHTG2-INV TCL T-PRO 2.0  09 Quente,100,
 TCL,23/01/26,110003,Ar Cond. TAC-12CHTG2-INV TCL T-PRO 2.0  12 Quente,200,
 TCL,23/01/26,110206,Ar Cond. TAC-55CSGS/CT-INV TCL Cassete  55 Frio,40,
 TCL,23/01/26,110006,Ar Cond. TAC-24CTG2-INV TCL T-PRO 2.0  24 Frio,150,
@@ -80,6 +41,16 @@ LG,27/01/26,2598,Cond. Z5UW48GFB1 - R32 - MULTI - Q/F - LG,11,
 LG,27/01/26,2597,Cond. Z5UW36GFB1 - R32 - MULTI - Q/F - LG,3,
 LG,27/01/26,2340,Evap. Teto ZVNW36GM1AA.ANWZBR1 Leve Inverter R32 Q/F - LG,10,
 LG,27/01/26,2341,Cond. Teto ZVUW36GM1AA.ANWZBR1 Leve Inverter R32 Q/F  - LG,10,
+TRANE,27/01/26,10482,Cond. Mini 08HP 4TVHS086K8000AA TVR Connect 220V Q/F - Trane,1,
+TRANE,27/01/26,10458,Cond. Mini 05HP 4TVH0048HF000AA TVR Mini Plus 220V Q/F - Trane,2,
+TRANE,27/01/26,10828,Evap. K74 4TVC0048KF000AA Connect - Trane,5,
+TRANE,27/01/26,11271,Painel K71v FIACNONEWAYPL2E (6 a 12) - Trane,7,
+TRANE,27/01/26,10482,Cond. Mini 08HP 4TVHS086K8000AA TVR Connect 220V Q/F - Trane,1,
+TRANE,27/01/26,10483,Cond. Mini 10HP 4TVHS096K8000AA TVR Connect 220V Q/F - Trane,1,
+TRANE,27/01/26,11273,Evap. K71v 4TVE0008KF000AA Connect - Trane,3,
+TRANE,27/01/26,11274,Evap. K71v 4TVE0010KF000AA Connect - Trane,1,
+TRANE,27/01/26,11275,Evap. K71v 4TVE0012KF000AA Connect - Trane,2,
+TRANE,27/01/26,11275,Evap. K71v 4TVE0012KF000AA Connect - Trane,5,
 SAMSUNG,28/01/26,30126,Evap HW07 AM022TNVDKH Wind Free C/EEV - Samsung,6,
 SAMSUNG,28/01/26,30126,Evap HW07 AM022TNVDKH Wind Free C/EEV - Samsung,20,
 SAMSUNG,28/01/26,30126,Evap HW07 AM022TNVDKH Wind Free C/EEV - Samsung,3,
