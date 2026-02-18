@@ -1,44 +1,33 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-GREE,18/02/26,7619,Evap. PT GULD57ZD1/A-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,58,
-GREE,18/02/26,7620,Cond. PT GULD56W1/NhA-S G-Prime Inverter Compact R32 220-240V FRIO Mono - Gree,58,
-GREE,18/02/26,7715,Evap. K7 GULD24T1/A-S G-Prime Compact R32 220-240V FRIO Mono - Gree,20,
-GREE,18/02/26,7716,Cond. K7 GULD24W1/NhA-S G-Prime Compact R32 220-240V FRIO Mono - Gree,20,
-GREE,18/02/26,7708,Painel K7 TF06 (24-56) G-Prime Inverter para Compact / Plus - Gree,20,
-GREE,18/02/26,7717,Evap. K7 GULD36T1/A-S G-Prime Compact R32 220-240V FRIO Mono - Gree,20,
-GREE,18/02/26,7718,Cond. K7 GULD36W1/NhA-S G-Prime Compact R32 220-240V FRIO Mono - Gree,20,
-GREE,18/02/26,7708,Painel K7 TF06 (24-56) G-Prime Inverter para Compact / Plus - Gree,20,
-GREE,18/02/26,7719,Evap. K7 GULD56T1/A-S G-Prime Compact R32 220-240V FRIO Mono - Gree,7,
-GREE,18/02/26,7720,Cond. K7 GULD56W1/NhA-S G-Prime Compact R32 220-240V FRIO Mono - Gree,7,
-GREE,18/02/26,7708,Painel K7 TF06 (24-56) G-Prime Inverter para Compact / Plus - Gree,7,
-DAIKIN,18/02/26,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,
-DAIKIN,18/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,
-DAIKIN,18/02/26,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,
-DAIKIN,18/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,
-DAIKIN,18/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,
-DAIKIN,18/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,
-DAIKIN,18/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,
-DAIKIN,18/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,
-DAIKIN,18/02/26,5513,Cond. 2MXC18RMVM p/ R32- MULTI - Q/F - Daikin,47,
+DAIKIN,19/02/26,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
+DAIKIN,19/02/26,5513,Cond. 2MXC18RMVM p/ R32- MULTI - Q/F - Daikin,47,18/02 reagendado para o dia 19/02
 DAIKIN,19/02/26,5265,Evap. DT FDMQA18A5VL - Mini SkyAir - Daikin,30,
 DAIKIN,19/02/26,5266,Cond. DT RZAQ18BVL - Mini SkyAir - Daikin ,30,
 DAIKIN,19/02/26,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,16,
 DAIKIN,19/02/26,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,95,
 DAIKIN,19/02/26,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,95,
 DAIKIN,19/02/26,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,16,
-MIDEA,19/02/26,43012,Cond. K7 38CCVE36515MM Inverter Connect - Frio R32 220V - Midea,22,
-MIDEA,19/02/26,43011,Evap. K7 40KVQE36M5 Inverter Connect - Frio R32 220V - Midea,22,
-MIDEA,19/02/26,43021,Cond. K7 38CCVE36515MC Inverter Connect - Frio R32 220V - Carrier,15,
-MIDEA,19/02/26,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,15,
-MIDEA,19/02/26,44034,Cond. Teto 38CCVE36515MC Xpower Inverter Connect - Frio R32 220V - Carrier,15,
-MIDEA,19/02/26,44033,Evap. Teto 42ZQVE36C5 Xpower Inverter Connect - R32 220V - Carrier,15,
-MIDEA,19/02/26,49079,Cond. 38CQU048535 Built-in Versatile Quente 220V T - Carrier,3,
-MIDEA,19/02/26,49077,Cond. 38CQU048235 Built-in Versatile Quente 380V T - Carrier,2,
-MIDEA,19/02/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,
-MIDEA,19/02/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,
-MIDEA,19/02/26,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,22,
-MIDEA,19/02/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,15,
-MIDEA,19/02/26,4021,Cond. 38TAVCA09M5 AI Airvolution Invertet Frio - Midea,172,
-MIDEA,19/02/26,4020,Evap. 42EFVCA09M5 AI Airvolution Inverter Frio - Midea,172,
+MIDEA,20/02/26,43012,Cond. K7 38CCVE36515MM Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 20/02
+MIDEA,20/02/26,43011,Evap. K7 40KVQE36M5 Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 20/02
+MIDEA,20/02/26,43021,Cond. K7 38CCVE36515MC Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 20/02
+MIDEA,20/02/26,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,15,19/02 reagendado para 20/02
+MIDEA,20/02/26,44034,Cond. Teto 38CCVE36515MC Xpower Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 20/02
+MIDEA,20/02/26,44033,Evap. Teto 42ZQVE36C5 Xpower Inverter Connect - R32 220V - Carrier,15,19/02 reagendado para 20/02
+MIDEA,20/02/26,49079,Cond. 38CQU048535 Built-in Versatile Quente 220V T - Carrier,3,19/02 reagendado para 20/02
+MIDEA,20/02/26,49077,Cond. 38CQU048235 Built-in Versatile Quente 380V T - Carrier,2,19/02 reagendado para 20/02
+MIDEA,20/02/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 20/02
+MIDEA,20/02/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 20/02
+MIDEA,20/02/26,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,22,19/02 reagendado para 20/02
+MIDEA,20/02/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,15,19/02 reagendado para 20/02
+MIDEA,20/02/26,4021,Cond. 38TAVCA09M5 AI Airvolution Invertet Frio - Midea,172,19/02 reagendado para 20/02
+MIDEA,20/02/26,4020,Evap. 42EFVCA09M5 AI Airvolution Inverter Frio - Midea,172,19/02 reagendado para 20/02
 LG,19/02/26,2596,Cond. Z4UW30GFB1 - R32 - MULTI - Q/F - LG,70,
 LG,19/02/26,2589,Cond. Z4UQ30GFB1 - R32 - MULTI - Frio - LG,15,
 LG,19/02/26,2518,Evap. K71v AMNW24GTTC0+PAINEL - MULTI - Q/F - LG,40,
