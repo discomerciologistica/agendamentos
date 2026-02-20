@@ -1,44 +1,18 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-DAIKIN,19/02/26,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,60,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,48,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,26,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5513,Cond. 2MXC18RMVM p/ R32- MULTI - Q/F - Daikin,47,18/02 reagendado para o dia 19/02
-DAIKIN,19/02/26,5265,Evap. DT FDMQA18A5VL - Mini SkyAir - Daikin,30,
-DAIKIN,19/02/26,5266,Cond. DT RZAQ18BVL - Mini SkyAir - Daikin ,30,
-DAIKIN,19/02/26,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,16,
-DAIKIN,19/02/26,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,95,
-DAIKIN,19/02/26,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,95,
-DAIKIN,19/02/26,5500,Cond. 3MXS18PMVM - MULTI - Q/F - Daikin,16,
-MIDEA,20/02/26,43012,Cond. K7 38CCVE36515MM Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 20/02
-MIDEA,20/02/26,43011,Evap. K7 40KVQE36M5 Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 20/02
-MIDEA,20/02/26,43021,Cond. K7 38CCVE36515MC Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 20/02
-MIDEA,20/02/26,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,15,19/02 reagendado para 20/02
-MIDEA,20/02/26,44034,Cond. Teto 38CCVE36515MC Xpower Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 20/02
-MIDEA,20/02/26,44033,Evap. Teto 42ZQVE36C5 Xpower Inverter Connect - R32 220V - Carrier,15,19/02 reagendado para 20/02
-MIDEA,20/02/26,49079,Cond. 38CQU048535 Built-in Versatile Quente 220V T - Carrier,3,19/02 reagendado para 20/02
-MIDEA,20/02/26,49077,Cond. 38CQU048235 Built-in Versatile Quente 380V T - Carrier,2,19/02 reagendado para 20/02
-MIDEA,20/02/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 20/02
-MIDEA,20/02/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 20/02
-MIDEA,20/02/26,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,22,19/02 reagendado para 20/02
-MIDEA,20/02/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,15,19/02 reagendado para 20/02
-MIDEA,20/02/26,4021,Cond. 38TAVCA09M5 AI Airvolution Invertet Frio - Midea,172,19/02 reagendado para 20/02
-MIDEA,20/02/26,4020,Evap. 42EFVCA09M5 AI Airvolution Inverter Frio - Midea,172,19/02 reagendado para 20/02
-LG,19/02/26,2596,Cond. Z4UW30GFB1 - R32 - MULTI - Q/F - LG,70,
-LG,19/02/26,2589,Cond. Z4UQ30GFB1 - R32 - MULTI - Frio - LG,15,
-LG,19/02/26,2518,Evap. K71v AMNW24GTTC0+PAINEL - MULTI - Q/F - LG,40,
-LG,20/02/26,2478,Evap. K74v ZTNW18GPLAA.ANWZBR1 c/ Painel Leve Inverter R32 Q/F  - LG,8,
-LG,20/02/26,2479,Cond. K74v ZTUW18GPLAA.ANWZBR1 Leve Inverter R32 Q/F - LG,8,
-LG,20/02/26,2481,Cond. K74v ZTUW24GPLAA.ANWZBR1 Leve Inverter R32 Q/F - LG,20,
-LG,20/02/26,2480,Evap. K74v ZTNW24GPLAA.ANWZBR1 c/ Painel Leve Inverter R32 Q/F  - LG,20,
-LG,20/02/26,2593,Cond. Z2UW18GFB1 - R32 - MULTI - Q/F - LG,15,
-LG,20/02/26,2593,Cond. Z2UW18GFB1 - R32 - MULTI - Q/F - LG,50,
-LG,20/02/26,2526,Evap. HW AMNW09GSJR0 - MULTI ART - Q/F - LG,5,
-LG,20/02/26,2594,Cond. Z3UW21GFB1 - R32 - MULTI - Q/F - LG,50,
+MIDEA,23/02/26,43012,Cond. K7 38CCVE36515MM Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 23/02
+MIDEA,23/02/26,43011,Evap. K7 40KVQE36M5 Inverter Connect - Frio R32 220V - Midea,22,19/02 reagendado para 23/02
+MIDEA,23/02/26,43021,Cond. K7 38CCVE36515MC Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 23/02
+MIDEA,23/02/26,43020,Evap. K7 40KVQE36C5 Inverter Connect  - R32 220V - Carrier,15,19/02 reagendado para 23/02
+MIDEA,23/02/26,44034,Cond. Teto 38CCVE36515MC Xpower Inverter Connect - Frio R32 220V - Carrier,15,19/02 reagendado para 23/02
+MIDEA,23/02/26,44033,Evap. Teto 42ZQVE36C5 Xpower Inverter Connect - R32 220V - Carrier,15,19/02 reagendado para 23/02
+MIDEA,23/02/26,49079,Cond. 38CQU048535 Built-in Versatile Quente 220V T - Carrier,3,19/02 reagendado para 23/02
+MIDEA,23/02/26,49077,Cond. 38CQU048235 Built-in Versatile Quente 380V T - Carrier,2,19/02 reagendado para 23/02
+MIDEA,23/02/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 23/02
+MIDEA,23/02/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,80,19/02 reagendado para 23/02
+MIDEA,23/02/26,43000,40KWFLBM - Grelha K7 - 24/36/60 BTUs - Midea,22,19/02 reagendado para 23/02
+MIDEA,23/02/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,15,19/02 reagendado para 23/02
+MIDEA,23/02/26,4021,Cond. 38TAVCA09M5 AI Airvolution Invertet Frio - Midea,172,19/02 reagendado para 23/02
+MIDEA,23/02/26,4020,Evap. 42EFVCA09M5 AI Airvolution Inverter Frio - Midea,172,19/02 reagendado para 23/02
 TCL,23/02/26,110006,Ar Cond. TAC-24CTG2-INV TCL T-PRO 2.0  24 Frio,5,
 TCL,23/02/26,110006,Ar Cond. TAC-24CTG2-INV TCL T-PRO 2.0  24 Frio,70,
 TCL,23/02/26,110008,Ar Cond. TAC-18CTG2X-INV TCL T-PRO 2.0  18 Frio,100,
@@ -61,3 +35,41 @@ LG,23/02/26,2491,Cond. K74v ZTUQ60GMLAA.ANWZBR1 Leve Inverter R32 Frio - LG,20,
 LG,23/02/26,2597,Cond. Z5UW36GFB1 - R32 - MULTI - Q/F - LG,50,
 AGRATTO,24/02/26,6001,AGRATTO MOD-CAR12 Cortina de Ar 120cm ,200,
 AGRATTO,24/02/26,6000,AGRATTO MOD-CAR09 Cortina de Ar 90cm ,150,
+LG,24/02/26,2519,Evap. K71v AMNW18GTTC0+PAINEL - MULTI - Q/F - LG,20,
+LG,24/02/26,2519,Evap. K71v AMNW18GTTC0+PAINEL - MULTI - Q/F - LG,50,
+LG,24/02/26,2590,Cond. Z4UQ36GFB1 - R32 - MULTI - Frio - LG,10,
+LG,24/02/26,2566,Evap. HW AMNW07GSAA1 - MULTI - Q/F - LG,70,
+LG,24/02/26,2567,Evap. HW AMNW09GSAA1 - MULTI - Q/F - LG,350,
+LG,24/02/26,2568,Evap. HW AMNW12GSJA1 - MULTI - Q/F - LG,120,
+LG,24/02/26,2569,Evap. HW AMNW18GSKA1 - MULTI - Q/F - LG,100,
+LG,24/02/26,2556,Evap. K71v AMNW09GTUC0 c/ Painel - MULTI - Q/F - LG,130,
+LG,24/02/26,2555,Evap. K71v AMNW12GTUC0 c/ Painel - MULTI - Q/F - LG,100,
+LG,24/02/26,2572,Evap. K74v AMNW24GTPA2 c/ Painel - MULTI - Q/F - LG,30,
+LG,24/02/26,2567,Evap. HW AMNW09GSAA1 - MULTI - Q/F - LG,300,
+LG,24/02/26,2570,Evap. HW AMNW24GSKA1 - MULTI - Q/F - LG,34,
+LG,26/02/26,2348,Evap. Teto ZVNW60GM2AA.ANWZBR1 Leve Inverter R32 Q/F - LG,40,
+LG,26/02/26,2349,Cond. Teto ZVUW60GM2AA.ANWZBR1 Leve Inverter R32 Q/F  - LG,40,
+LG,26/02/26,2598,Cond. Z5UW48GFB1 - R32 - MULTI - Q/F - LG,20,
+LG,26/02/26,2598,Cond. Z5UW48GFB1 - R32 - MULTI - Q/F - LG,100,
+LG,26/02/26,2396,Evap. K71v ZTNW18GTTAA.ANWZBR1 c/ Painel Leve Inverter R32 Q/F - LG,10,
+LG,26/02/26,2397,Cond. K71v ZTUW18GTTAA.ANWZBR1  Leve Inverter R32 Q/F - LG,10,
+LG,26/02/26,2396,Evap. K71v ZTNW18GTTAA.ANWZBR1 c/ Painel Leve Inverter R32 Q/F - LG,20,
+LG,26/02/26,2397,Cond. K71v ZTUW18GTTAA.ANWZBR1  Leve Inverter R32 Q/F - LG,20,
+LG,26/02/26,2570,Evap. HW AMNW24GSKA1 - MULTI - Q/F - LG,1,
+SAMSUNG,26/02/26,30223,Evap K71v AM018NN1DCH - Samsung,30,
+SAMSUNG,26/02/26,30225,Evap K71v AM022NN1DKH 7000 BTUs - Samsung,10,
+SAMSUNG,26/02/26,30224,Evap K71v AM024NN1DCH - Samsung,40,
+SAMSUNG,26/02/26,30226,Evap K71v AM028NN1DKH 9000 BTUs - Samsung,33,
+SAMSUNG,26/02/26,30127,Evap HW09  AM028TNVDKH Wind Free c/EEV - Samsung,10,
+SAMSUNG,26/02/26,30327,Evap DT AM036ANHPKH AP c/ Bomba - Samsung,10,
+SAMSUNG,26/02/26,30227,Evap K71v AM036NN1DKH 12000 BTUs - Samsung,33,
+SAMSUNG,26/02/26,30130,Evap HW18  AM056TNVDKH Wind Free c/EEV - Samsung,30,
+SAMSUNG,26/02/26,30047,Cond DVM 07HP AM070TXMDKH Q/F 220V - Samsung,3,
+SAMSUNG,26/02/26,30131,Evap HW24  AM071TNVDKH Wind Free c/EEV - Samsung,30,
+SAMSUNG,26/02/26,30010,Cond DVM 8HP AM080CXVAFH S2 Q/F 220V - Samsung,3,
+SAMSUNG,26/02/26,30207,Painel K71v PC1BWFMAN (18~24)  Wind Free - Samsung,70,
+SAMSUNG,26/02/26,30211,Painel K71v PC1NWFMAN - Wind Free (7-12) - Samsung,76,
+SAMSUNG,26/02/26,3407,Controle Remoto AR-EH03E MULTI/VRF - Samsung,150,
+SAMSUNG,26/02/26,30396,Controle Remoto DVM WIFI MIM-H04N - MULTI/VRF - Samsung,5,
+TCL,02/03/26,110051,Ar Cond. TAC-34CHSG2-INV TCL Serie G2  34 Quente,18,
+TCL,02/03/26,110051,Ar Cond. TAC-34CHSG2-INV TCL Serie G2  34 Quente,112,
