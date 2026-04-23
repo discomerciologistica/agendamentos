@@ -1,21 +1,13 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-GREE,24/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7179,Evap. GWH09ATA-D6DNA1A/I - G-Top Auto Inverter - Gree,24,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7180,Cond. GWH09ATA-D6DNA1A/O - G-Top Auto Inverter - Gree,24,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,12,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,12,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7195,Evap. GWH30ATEXF-S6DNA1A/I - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7196,Cond. GWH30ATEXF-S6DNA1A/O - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,306,22/04 reagendado pro dia 24/04
-GREE,24/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,306,22/04 reagendado pro dia 24/04
 LG,24/04/26,2569,Evap. HW AMNW18GSKA1 - MULTI - Q/F - LG,35,
 LG,24/04/26,2570,Evap. HW AMNW24GSKA1 - MULTI - Q/F - LG,33,
 LG,24/04/26,2598,Cond. Z5UW48GFB1 - R32 - MULTI - Q/F - LG,90,
+GREE,27/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
+GREE,27/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
+GREE,27/04/26,7179,Evap. GWH09ATA-D6DNA1A/I - G-Top Auto Inverter - Gree,24,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
+GREE,27/04/26,7180,Cond. GWH09ATA-D6DNA1A/O - G-Top Auto Inverter - Gree,24,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
+GREE,27/04/26,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,12,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
+GREE,27/04/26,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,12,22/04 reagendado pro dia 24/04 reagendado pro dia 27/04
 TCL,27/04/26,110203,Ar Cond. TAC-36CSA/CT-INV TCL Cassete  36 Frio,1,
 TCL,27/04/26,110103,Ar Cond. TAC-55CSGS/CF-INV TCL Piso Teto  55 Frio,51,
 TCL,27/04/26,110103,Ar Cond. TAC-55CSGS/CF-INV TCL Piso Teto  55 Frio,66,
@@ -26,8 +18,16 @@ TCL,27/04/26,110206,Ar Cond. TAC-55CSGS/CT-INV TCL Cassete  55 Frio,3,
 TCL,27/04/26,110101,Ar Cond. TAC-55CSG/CF-INV TCL Piso Teto  55 Frio,13,
 TCL,27/04/26,110201,Ar Cond. TAC-36CSG/CT-INV TCL Cassete  36 Frio,11,
 TCL,27/04/26,110051,Ar Cond. TAC-34CHSG2-INV TCL Serie G2  34 Quente,25,
-TCL,28/04/26,110205,Ar Cond. TAC-36CSGS/CT-INV TCL Cassete  36 Frio,38,
-TCL,28/04/26,110051,Ar Cond. TAC-34CHSG2-INV TCL Serie G2  34 Quente,25,
+GREE,28/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04 reagendado para 28/07
+GREE,28/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,337,22/04 reagendado pro dia 24/04 reagendado para 28/07
+GREE,28/04/26,7076,Evap. GWC09ATB-D6DNA1A/I - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04 reagendado para 28/07
+GREE,28/04/26,7077,Cond. GWC09ATB-D6DNA1A/O - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04 reagendado para 28/07
+GREE,28/04/26,7195,Evap. GWH30ATEXF-S6DNA1A/I - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04 reagendado para 28/04
+GREE,28/04/26,7196,Cond. GWH30ATEXF-S6DNA1A/O - G-Top Auto Inverter - Gree,30,22/04 reagendado pro dia 24/04 reagendado para 28/04
+GREE,28/04/26,7409,Evap GWC12ATCXB-D6DNA3C/I  G-Side Auto Inverter - Gree,306,22/04 reagendado pro dia 24/04 reagendado para 28/04
+GREE,28/04/26,7410,Cond GWC12AWCXB-D6DNA4C/O  G-Side Auto Inverter - Gree,306,22/04 reagendado pro dia 24/04 reagendado para 28/04
+TCL,29/04/26,110205,Ar Cond. TAC-36CSGS/CT-INV TCL Cassete  36 Frio,38,28/04 REAGENDADO PARA 29/04
+TCL,29/04/26,110051,Ar Cond. TAC-34CHSG2-INV TCL Serie G2  34 Quente,25,28/04 REAGENDADO PARA 29/04
 TCL,28/04/26,110001,Ar Cond. TAC-09CHTG2-INV TCL T-PRO 2.0  09 Quente,4,
 TCL,28/04/26,110001,Ar Cond. TAC-09CHTG2-INV TCL T-PRO 2.0  09 Quente,2,
 TCL,28/04/26,110001,Ar Cond. TAC-09CHTG2-INV TCL T-PRO 2.0  09 Quente,44,
@@ -59,4 +59,16 @@ SAMSUNG,30/04/26,30380,Refinete Interno MXJ-YA4422M - Samsung,4,
 SAMSUNG,30/04/26,30045,Cond DVM 12HP AM120KXMDFH Q/F 220V - Samsung,2,
 SAMSUNG,30/04/26,30371,Refinete Interno MXJ-YA1509M - Samsung,150,
 SAMSUNG,30/04/26,30373,Refinete Interno MXJ-YA2512M - Samsung,150,
+SAMSUNG,30/04/26,30420,Painel TouchScreen MCM-A300BN - Samsung,3,
+SAMSUNG,30/04/26,30415,Receptor de Duto VRF MRK-A10N - Samsung,3,
+SAMSUNG,30/04/26,30399,Controle Remoto C/ FIO MWR-SH11N - Mini ToucH - Samsung,2,
+SAMSUNG,30/04/26,30396,Controle Remoto DVM WIFI MIM-H04N - MULTI/VRF - Samsung,1,
+SAMSUNG,30/04/26,30396,Controle Remoto DVM WIFI MIM-H04N - MULTI/VRF - Samsung,1,
+SAMSUNG,30/04/26,30415,Receptor de Duto VRF MRK-A10N - Samsung,2,
+SAMSUNG,30/04/26,30399,Controle Remoto C/ FIO MWR-SH11N - Mini ToucH - Samsung,1,
+GREE,30/04/26,7407,Evap GWH09ATBXB-D6DNA3B/I  G-Side Auto Inverter - Gree,320,
+GREE,30/04/26,7408,Cond GWH09AWBXB-D6DNA4B/O  G-Side Auto Inverter - Gree,320,
+TCL,30/04/26,110006,Ar Cond. TAC-24CTG2-INV TCL T-PRO 2.0  24 Frio,150,
+TCL,30/04/26,110025,Cond TAC-09CTG3-INV-O  BreezeIN AI Frio - TCL,80,
+TCL,30/04/26,110024,Evap TAC-09CTG3-INV-I  BreezeIN AI Frio - TCL,80,
 LG,08/05/26,2597,Cond. Z5UW36GFB1 - R32 - MULTI - Q/F - LG,20,
