@@ -1,24 +1,18 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-DAIKIN,08/07/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,40,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,60,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,40,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,60,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5156,Evap. FTKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5157,Cond. RKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,80,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5154,Evap. FTHC12T5VL Full Inverter R-32  12 Quente - Daikin,70,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,80,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5155,Cond. RHC12T5VL Full Inverter R-32  12 Quente - Daikin,70,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5252,Evap DT FBQ42AVL Sky Air - QF - Daikin,5,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5253,Cond DT RZQ42AVL Sky Air - QF - Daikin,5,06/07 alretado para 07/07 e reagendado para 08/07
-DAIKIN,08/07/26,5156,Evap. FTKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,
-DAIKIN,08/07/26,5157,Cond. RKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,
-DAIKIN,08/07/26,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,140,
-DAIKIN,08/07/26,5152,Evap. FTKC12T5VL Full Inverter R-32  12 Frio - Daikin,120,
-DAIKIN,08/07/26,5149,Cond. RKC09T5VL Full Inverter R-32  09 Frio - Daikin,140,
-DAIKIN,08/07/26,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,120,
+DAIKIN,08/07/26,5162,Evap. FTHC24T5VL Full Inverter R-32  24 Quente - Daikin,40,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5160,Evap. FTKC24T5VL Full Inverter R-32  24 Frio - Daikin,60,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5163,Cond. RHC24T5VL Full Inverter R-32  24 Quente - Daikin,40,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5161,Cond. RKC24T5VL Full Inverter R-32  24 Frio - Daikin,60,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5158,Evap. FTHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5156,Evap. FTKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5159,Cond. RHC18T5VL Full Inverter R-32  18 Quente - Daikin,50,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5157,Cond. RKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5150,Evap. FTHC09T5VL Full Inverter R-32  09 Quente - Daikin,80,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5154,Evap. FTHC12T5VL Full Inverter R-32  12 Quente - Daikin,70,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5151,Cond. RHC09T5VL Full Inverter R-32  09 Quente - Daikin,80,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5155,Cond. RHC12T5VL Full Inverter R-32  12 Quente - Daikin,70,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5252,Evap DT FBQ42AVL Sky Air - QF - Daikin,5,06/07 alterado para 07/07 e reagendado para 08/07
+DAIKIN,08/07/26,5253,Cond DT RZQ42AVL Sky Air - QF - Daikin,5,06/07 alterado para 07/07 e reagendado para 08/07
 LG,10/07/26,2484,Evap. K74v ZTNW36GNLAA.ANWZBR1 c/ Painel Leve Inverter R32 Q/F  - LG,30,
 LG,10/07/26,2485,Cond. K74v ZTUW36GNLAA.ANWZBR1 Leve Inverter R32 Q/F - LG,30,
 MIDEA,13/07/26,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,60,
@@ -27,6 +21,12 @@ MIDEA,13/07/26,40009,Cond. 38EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,
 MIDEA,13/07/26,40008,Evap. 42EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,85,
 MIDEA,13/07/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,
 MIDEA,13/07/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,
+DAIKIN,15/07/26,5156,Evap. FTKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,08/07 reagendado para 15/07
+DAIKIN,15/07/26,5157,Cond. RKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,08/07 reagendado para 15/07
+DAIKIN,15/07/26,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,140,08/07 reagendado para 15/07
+DAIKIN,15/07/26,5152,Evap. FTKC12T5VL Full Inverter R-32  12 Frio - Daikin,120,08/07 reagendado para 15/07
+DAIKIN,15/07/26,5149,Cond. RKC09T5VL Full Inverter R-32  09 Frio - Daikin,140,08/07 reagendado para 15/07
+DAIKIN,15/07/26,5153,Cond. RKC12T5VL Full Inverter R-32  12 Frio - Daikin,120,08/07 reagendado para 15/07
 DAIKIN,16/07/26,5561,Evap. DT12 (CDXS35KVM)  - Daikin,8,
 DAIKIN,16/07/26,5562,Evap. DT18 (CDXS50KVM)  - Daikin,15,
 DAIKIN,16/07/26,5509,Cond. 5MXS38PMVM - MULTI - Q/F - Daikin,5,
