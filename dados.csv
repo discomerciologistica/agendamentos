@@ -1,10 +1,4 @@
 FABRICANTE,DATA,CODIGO,PRODUTO,QTD,OBS
-MIDEA,13/07/26,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,60,
-MIDEA,13/07/26,40012,Evap. 42EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,60,
-MIDEA,13/07/26,40009,Cond. 38EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,85,
-MIDEA,13/07/26,40008,Evap. 42EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,85,
-MIDEA,13/07/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,
-MIDEA,13/07/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,
 DAIKIN,15/07/26,5156,Evap. FTKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,08/07 reagendado para 15/07
 DAIKIN,15/07/26,5157,Cond. RKC18T5VL Full Inverter R-32  18 Frio - Daikin,50,08/07 reagendado para 15/07
 DAIKIN,15/07/26,5148,Evap. FTKC09T5VL Full Inverter R-32  09 Frio - Daikin,140,08/07 reagendado para 15/07
@@ -41,4 +35,10 @@ LG,17/07/26,2597,Cond. Z5UW36GFB1 - R32 - MULTI - Q/F - LG,20,
 LG,17/07/26,2527,Evap. HW AMNW12GSJR0 - MULTI ART - Q/F - LG,2,
 LG,17/07/26,2571,Evap. K74v AMNW18GTPA2 c/ Painel - MULTI - Q/F - LG,12,
 LG,17/07/26,2572,Evap. K74v AMNW24GTPA2 c/ Painel - MULTI - Q/F - LG,18,
+MIDEA,17/07/26,40013,Cond. 38EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,60,13/07 reagendado para 17/07
+MIDEA,17/07/26,40012,Evap. 42EZVCA24M5 Inverter AI Ecomaster (R32) FRIO - Midea,60,13/07 reagendado para 17/07
+MIDEA,17/07/26,40009,Cond. 38EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,85,13/07 reagendado para 17/07
+MIDEA,17/07/26,40008,Evap. 42EZVCA18M5 Inverter AI Ecomaster (R32) FRIO - Midea,85,13/07 reagendado para 17/07
+MIDEA,17/07/26,40007,Cond. 38EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,13/07 reagendado para 17/07
+MIDEA,17/07/26,40006,Evap. 42EZVQA12M5 Inverter AI Ecomaster (R32) Q/F - Midea,180,13/07 reagendado para 17/07
 SAMSUNG,22/07/26,30420,Painel TouchScreen MCM-A300BN - Samsung,3,
