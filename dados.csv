@@ -3,18 +3,18 @@ DAIKIN,30/07/26,5525,Evap. HW09  CTXS09PMVM - Daikin,450,29/07 reagendado para o
 DAIKIN,30/07/26,5526,Evap. HW12  CTXS12PMVM - Daikin,250,29/07 reagendado para o dia 30/07
 DAIKIN,30/07/26,5502,Cond. 4MXS28PMVM - MULTI - Q/F - Daikin,50,29/07 reagendado para o dia 30/07
 DAIKIN,30/07/26,5508,Cond. 4MXS34PMVM - MULTI - Q/F - Daikin,70,29/07 reagendado para o dia 30/07
-LG,30/07/26,2214,Evap. S3NQ09AA31F.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,31,
-LG,30/07/26,2215,Cond. S3UQ09AA31F.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,31,
-LG,30/07/26,2222,Evap. S3NQ18KL31C.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,15,
-LG,30/07/26,2223,Cond. S3UQ18KL31C.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,15,
-LG,30/07/26,2216,Evap. S3NW09AA31E.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,30,
-LG,30/07/26,2217,Cond. S3UW09AA31E.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,30,
-LG,30/07/26,2161,Evap. S3NW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,4,
-LG,30/07/26,2162,Cond. S3UW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,4,
-LG,30/07/26,2224,Evap. S3NW18KL31C.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,16,
-LG,30/07/26,2225,Cond. S3UW18KL31C.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,16,
-LG,30/07/26,2139,Evap. (S4NW36R43FB) - DUAL INV. VOICE POWER Q/F - LG,10,
-LG,30/07/26,2140,Cond. (S4UW36R43FB) - DUAL INV. VOICE POWER Q/F - LG,10,
+LG,31/07/26,2214,Evap. S3NQ09AA31F.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,31,30/07 reagendado para 31/07
+LG,31/07/26,2215,Cond. S3UQ09AA31F.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,31,30/07 reagendado para 31/07
+LG,31/07/26,2222,Evap. S3NQ18KL31C.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,15,30/07 reagendado para 31/07
+LG,31/07/26,2223,Cond. S3UQ18KL31C.EB2GAM1 - Dual Inv. AI Voice - Frio - LG,15,30/07 reagendado para 31/07
+LG,31/07/26,2216,Evap. S3NW09AA31E.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,30,30/07 reagendado para 31/07
+LG,31/07/26,2217,Cond. S3UW09AA31E.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,30,30/07 reagendado para 31/07
+LG,31/07/26,2161,Evap. S3NW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,4,30/07 reagendado para 31/07
+LG,31/07/26,2162,Cond. S3UW12JA31A - DUAL Inverter Voice +IA (R-32) - Q/F - LG,4,30/07 reagendado para 31/07
+LG,31/07/26,2224,Evap. S3NW18KL31C.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,16,30/07 reagendado para 31/07
+LG,31/07/26,2225,Cond. S3UW18KL31C.EB2GAM1 - Dual Inv. AI Voice - Q/F - LG,16,30/07 reagendado para 31/07
+LG,31/07/26,2139,Evap. (S4NW36R43FB) - DUAL INV. VOICE POWER Q/F - LG,10,30/07 reagendado para 31/07
+LG,31/07/26,2140,Cond. (S4UW36R43FB) - DUAL INV. VOICE POWER Q/F - LG,10,30/07 reagendado para 31/07
 "GREE,31/07/26,7730,Evap K7 GKC54EEXK-S6DNF6A/I G-Prime Inverter Compact R32 Frio 220V - Gree,105,DESCARREGAMENTO
 EQUIPE DIS"
 "GREE,31/07/26,7731,Cond K7 GKC54EEXK-S6DNF6A/O G-Prime Inverter Compact R32 Frio 220V - Gree,105,DESCARREGAMENTO
@@ -55,22 +55,6 @@ GREE,31/07/26,7787,Evap. K71v GKC22DA-D6DNA1A/I G-Línea Inverter  R32 220V Frio 
 GREE,31/07/26,7788,Cond. K71v GWC22ATE-D6DNA1AK/O G-Línea Inverter R32 220V Frio - Gree,15,
 GREE,31/07/26,7726,Evap K7 GKC24ECXF-S6DNF6B/I G-Prime Inverter Compact R32 Frio 220V - Gree,15,
 GREE,31/07/26,7727,Cond K7 GKC24ECXF-S6DNF6B/O G-Prime Inverter Compact R32 Frio 220V - Gree,15,
-MIDEA,31/07/26,44034,Cond. Teto 38CCVE36515MC Xpower Inverter Connect - Frio R32 220V - Carrier,3,
-MIDEA,31/07/26,44033,Evap. Teto 42ZQVE36C5 Xpower Inverter Connect - R32 220V - Carrier,3,
-MIDEA,31/07/26,44040,Cond. Teto 38CCVE60515MC Xpower Inverter Connect - Frio R32 220V - Carrier,10,
-MIDEA,31/07/26,44039,Evap. Teto 42ZQVE60C5 Xpower Inverter Connect - R32 220V - Carrier,10,
-MIDEA,31/07/26,44040,Cond. Teto 38CCVE60515MC Xpower Inverter Connect - Frio R32 220V - Carrier,15,
-MIDEA,31/07/26,44039,Evap. Teto 42ZQVE60C5 Xpower Inverter Connect - R32 220V - Carrier,15,
-MIDEA,31/07/26,4359,Cond K7 1v 38TVQF24515MC Inverter QF - Carrier,30,
-MIDEA,31/07/26,4357,Evap K7 1v 40KVQOF24C5 Inverter + Painel - Carrier,30,
-MIDEA,31/07/26,4355,Cond K7 1v 38TVCF18515MC Inverter Frio - Carrier,11,
-MIDEA,31/07/26,4354,Evap K7 1v 40KVQOF18C5 Inverter + Painel - Carrier,11,
-MIDEA,31/07/26,40001,Cond. 38EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
-MIDEA,31/07/26,40000,Evap. 42EZVCA09M5 Inverter AI Ecomaster (R32) FRIO - Midea,100,
-MIDEA,31/07/26,4031,Cond. 38TAVCA22M5 AI Airvolution Invertet Frio - Midea,35,
-MIDEA,31/07/26,4030,Evap. 42EFVCA22M5 AI Airvolution Inverter Frio - Midea,35,
-MIDEA,31/07/26,44040,Cond. Teto 38CCVE60515MC Xpower Inverter Connect - Frio R32 220V - Carrier,11,
-MIDEA,31/07/26,44039,Evap. Teto 42ZQVE60C5 Xpower Inverter Connect - R32 220V - Carrier,11,
 MIDEA,04/08/26,4065,Grelha K7 40KWFLB (22-60) Inverter ,11,
 MIDEA,04/08/26,4950,Cond. 38AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,20,
 MIDEA,04/08/26,4949,Evap. 42AGVQC30M5 Inverter Xtreme Save Connect Q/F - Midea,20,
