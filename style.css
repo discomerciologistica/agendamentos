@@ -1,64 +1,3 @@
-@media(max-width: 600px){
-	body{
-		padding: 10px;
-	}
-	.container {
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-    padding: 0 10px;
-  }
-
-  h1 {
-    font-size: 1.5rem; /* reduz tamanho da fonte */
-    margin-bottom: 4vh;
-  }
-
-  #searchInput {
-    width: 100%; /* ocupa toda a largura disponível */
-    max-width: 100%;
-    font-size: 14px;
-  }
-
-  table {
-    width: 100%;
-    font-size: 12px;
-    margin: 20px 0;
-  }
-
-  th, td {
-    padding: 8px;
-  }
-
-  .menu {
-    width: 100%;
-    max-width: 100%;
-    padding: 5px;
-  }
-
-  .menu ul {
-    gap: 10px;
-  }
-
-  .menu a {
-    padding: 10px;
-    font-size: 14px;
-  }
-
-  /* Ajuste para o dropdown sugestões, se usar */
-  #suggestions {
-    max-width: 100%;
-    left: 0;
-    right: 0;
-  }
-  
-   .table-wrapper {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch; /* rolagem suave no iOS */
-  }
-	
-	
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -72,6 +11,7 @@ body {
   text-align: center;
   margin-top: 8vh;
   margin-bottom: 15vh;
+  padding: 0 16px;
 }
 
 h1 {
@@ -80,34 +20,72 @@ h1 {
   text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-#search {
+/* Os campos de busca têm ids diferentes em cada página (searchFabricante,
+   searchCodigo, searchProduto, searchInput). Estilo aplicado pelo tipo. */
+input[type="text"] {
   padding: 10px;
   width: 300px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin: 6px 0;
   border: none;
   border-radius: 5px;
   font-size: 16px;
 }
 
-#suggestions {
+/* Lista de sugestões. Existem três na página inicial, por isso é uma classe
+   e não um id, e fica no fluxo normal em vez de posicionada de forma absoluta. */
+.suggestions {
   list-style: none;
-  margin: 0;
+  margin: 0 auto 10px auto;
   padding: 0;
-  max-width: 500px;
-  margin: 0 auto;
+  width: 300px;
+  max-width: 100%;
   background: rgba(0,0,0,0.7);
   border-radius: 5px;
-  position: absolute;
-  left: 0;
-  right: 0;
+  overflow: hidden;
+  text-align: left;
 }
 
-#suggestions li {
+.suggestions:empty {
+  background: none;
+}
+
+.suggestions li {
   padding: 8px;
   cursor: pointer;
 }
 
-#suggestions li:hover {
+.suggestions li:hover {
   background: rgba(255,255,255,0.2);
+}
+
+.titulo-resultados {
+  margin-top: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+}
+
+.botao-limpar {
+  background: #34495e;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+.botao-limpar:hover {
+  background: #1abc9c;
+}
+
+/* Sem isto a tabela estoura a largura da tela no celular. */
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 table {
@@ -127,6 +105,13 @@ th, td {
 th {
   background: rgba(0,0,0,0.9);
 }
+
+/* Destaque da coluna Obs, só na tabela de agendamentos. */
+#results td:last-child {
+  color: #ff4444;
+  font-weight: bold;
+}
+
 .link-uf {
   color: yellow;
   font-weight: bold;
@@ -134,9 +119,11 @@ th {
   display: inline-block;
   margin-bottom: 20px;
 }
+
 .link-uf:hover {
   color: gold;
 }
+
 #ultimaAtualizacao {
   margin-top: 10px;
   font-size: 14px;
@@ -144,40 +131,36 @@ th {
   text-shadow: 1px 1px 2px black;
 }
 
-td:last-child {
-  color: #ff4444; /* vermelho vivo */
-  font-weight: bold;
-}
 .menu {
-	flex-direction:column;
-	align-items: center;	
   display: flex;
-  justify-content: center;  /* Centraliza os botões */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 30px auto;
   padding: 10px;
-  /*background-color: #2c3e50;*/
   border-radius: 10px;
   width: 90%;
   max-width: 500px;
 }
-  
 
 .menu ul {
-  list-style: none; /* Remove bolinhas */
+  list-style: none;
   display: flex;
-  flex-direction:column;
-  gap: 15px; /* Espaçamento entre os botões */
+  flex-direction: column;
+  gap: 15px;
   padding: 0;
   margin: 0;
   align-items: center;
+  width: 100%;
 }
 
 .menu li {
   margin: 5px;
+  width: 100%;
 }
 
 .menu a {
- display: block;
+  display: block;
   width: 100%;
   box-sizing: border-box;
   background-color: #34495e;
@@ -197,3 +180,70 @@ td:last-child {
   background-color: #1abc9c;
   color: white;
 }
+
+@media (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+
+  .container {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding: 0 12px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    margin-bottom: 4vh;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .suggestions {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+    font-size: 12px;
+    margin: 20px 0;
+  }
+
+  th, td {
+    padding: 8px;
+    white-space: nowrap;
+  }
+
+  .menu {
+    width: 100%;
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .menu ul {
+    gap: 10px;
+  }
+
+  .menu a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+/* Calendario: destaca o dia corrente e esmaece o que ja passou. */
+.linha-hoje td {
+  background: rgba(26, 188, 156, 0.35);
+  font-weight: bold;
+}
+
+.linha-passada td {
+  opacity: 0.55;
+}
+
+/* Painel de prazos: cor por situacao da NF. */
+.situacao-critica td { background: rgba(231, 76, 60, 0.45); font-weight: bold; }
+.situacao-alerta  td { background: rgba(243, 156, 18, 0.35); }
+.situacao-ok      td { background: rgba(39, 174, 96, 0.22); }
