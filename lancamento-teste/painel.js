@@ -104,7 +104,13 @@
     (linhasCalendario || []).forEach(function (l) {
       const iso = isoDeDataBR(l[0]);
       if (!iso) return;
-      porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "", motivoBloqueio: l[5] || "" };
+      // STATUS so' vem "BLOQUEADO" quando e' um dia marcado de verdade (feriado/
+      // inventario, vindo do dados.json) - a planilha real usa a coluna OBS pra
+      // outra coisa (texto tipo "4 CARRETAS"), entao NAO da' pra usar "tem texto
+      // em OBS?" como sinal de bloqueio (bug corrigido em 30/09/2026: isso
+      // marcava quase todo dia com entrega como bloqueado/vermelho por engano).
+      porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "",
+                       motivoBloqueio: l[4] === "BLOQUEADO" ? (l[5] || "") : "" };
     });
     return porDia;
   }
