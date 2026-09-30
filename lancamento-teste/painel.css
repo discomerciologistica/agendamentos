@@ -506,6 +506,20 @@ td.col-check, th.col-check { width: 36px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.calendario .dia.bloqueado { background: var(--perigo-claro) !important; }
+.calendario .dia .tag-bloqueio {
+  display: block;
+  background: var(--perigo-claro);
+  color: var(--perigo);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-bottom: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .detalhe-dia { margin-top: 16px; }
 
 /* ---------- Tela do dia ---------- */
@@ -950,12 +964,9 @@ td { color: var(--tinta); }
 .badge-st-CONFIRMADO { background: var(--ok-claro); color: var(--ok-escuro); }
 .badge-st-ENTREGUE   { background: #eceef2; color: #4b515c; }
 .badge-st-REAGENDADO { background: var(--alerta-claro); color: var(--alerta); }
-.badge-st-ANTECIPADO { background: oklch(0.95 0.03 250); color: oklch(0.45 0.13 250); }
-.badge-st-RECUSA     { background: var(--perigo-claro); color: var(--perigo); }
 .badge-st-OUTRO      { background: #eceef2; color: #4b515c; }
 html[data-tema="escuro"] .badge-st-ENTREGUE,
 html[data-tema="escuro"] .badge-st-OUTRO { background: #2a2f37; color: #b4bac4; }
-html[data-tema="escuro"] .badge-st-ANTECIPADO { background: oklch(0.3 0.06 250); color: oklch(0.8 0.1 250); }
 
 /* ---------- Tabela vazia ---------- */
 

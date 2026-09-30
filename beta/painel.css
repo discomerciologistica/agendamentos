@@ -506,6 +506,20 @@ td.col-check, th.col-check { width: 36px; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.calendario .dia.bloqueado { background: var(--perigo-claro) !important; }
+.calendario .dia .tag-bloqueio {
+  display: block;
+  background: var(--perigo-claro);
+  color: var(--perigo);
+  border-radius: 4px;
+  padding: 2px 6px;
+  margin-bottom: 3px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .detalhe-dia { margin-top: 16px; }
 
 /* ---------- Tela do dia ---------- */

@@ -104,7 +104,7 @@
     (linhasCalendario || []).forEach(function (l) {
       const iso = isoDeDataBR(l[0]);
       if (!iso) return;
-      porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "" };
+      porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "", motivoBloqueio: l[5] || "" };
     });
     return porDia;
   }
@@ -136,8 +136,11 @@
           return '<span class="tag-fab">' + f + "</span>";
         }).join("") : "";
         const total = info ? info.veiculos : 0;
-        const classes = "dia" + (iso === hoje ? " hoje" : "") + (total >= LIMITE_VEICULOS_DIA ? " cheio" : "");
+        const motivo = info ? info.motivoBloqueio : "";
+        const classes = "dia" + (iso === hoje ? " hoje" : "") + (total >= LIMITE_VEICULOS_DIA ? " cheio" : "") +
+          (motivo ? " bloqueado" : "");
         html += '<div class="' + classes + '" data-iso="' + iso + '"><div class="numero">' + dia + "</div>" + tags +
+          (motivo ? '<span class="tag-bloqueio">' + motivo + "</span>" : "") +
           (total ? '<span class="total-dia">' + total + " veíc.</span>" : "") + "</div>";
       }
       grade.innerHTML = html;
@@ -454,6 +457,9 @@
       "</a>";
   }
 
+  // NFs distintas entre os itens filtrados - uma NF com varios produtos conta
+  // 1 vez so' (antes contava 1 vez por produto, numero inflado sem sentido
+  // pra quem le "quantas notas estao confirmadas/aguardando").
   function contaNfs(itensFiltrados) {
     const nfs = new Set();
     itensFiltrados.forEach(it => (it.nfs || []).forEach(nf => { if (nf) nfs.add(nf); }));
