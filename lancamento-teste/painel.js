@@ -454,11 +454,18 @@
       "</a>";
   }
 
+  function contaNfs(itensFiltrados) {
+    const nfs = new Set();
+    itensFiltrados.forEach(it => (it.nfs || []).forEach(nf => { if (nf) nfs.add(nf); }));
+    return nfs.size;
+  }
+
   function iniciaResumo(linhasCalendario, produtos) {
     const itens = produtos.itens || [];
-    const confirmados = itens.filter(it => it.agendado && it.status === "CONFIRMADO").length;
-    const semAgenda = itens.filter(it => !it.agendado).length;
-    const semAgendaCritica = itens.filter(it => !it.agendado && situacaoEspera(it.coleta).classe === "situacao-critica").length;
+    const confirmados = contaNfs(itens.filter(it => it.agendado && it.status === "CONFIRMADO"));
+    const itensSemAgenda = itens.filter(it => !it.agendado);
+    const semAgenda = contaNfs(itensSemAgenda);
+    const semAgendaCritica = contaNfs(itensSemAgenda.filter(it => situacaoEspera(it.coleta).classe === "situacao-critica"));
     const hojeInfo = porDiaDeCalendario(linhasCalendario)[hojeIso()];
     const veiculosHoje = hojeInfo ? hojeInfo.veiculos : 0;
 
