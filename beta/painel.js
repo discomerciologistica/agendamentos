@@ -1,0 +1,498 @@
+// Painel único de consulta: Calendário (a partir de calendario.csv) +
+// Produtos com agenda / Faturados sem agenda (a partir de produtos.json,
+// gerado por build/gerar_produtos_json.py a partir da planilha). Tudo
+// client-side, sem servidor - só consulta, ninguém edita por aqui.
+
+(function () {
+  "use strict";
+
+  // ---------------------------------------------------------------- abas --
+
+  const abas = document.querySelectorAll(".aba");
+  const paineis = {
+    calendario: document.getElementById("painelCalendario"),
+    agenda: document.getElementById("painelAgenda"),
+    "sem-agenda": document.getElementById("painelSemAgenda"),
+  };
+  function mostraAba(nome) {
+    abas.forEach(function (b) { b.classList.toggle("ativa", b.dataset.aba === nome); });
+    Object.keys(paineis).forEach(function (k) { paineis[k].hidden = k !== nome; });
+  }
+  abas.forEach(function (btn) {
+    btn.addEventListener("click", function () { mostraAba(btn.dataset.aba); });
+  });
+
+  function badge(status) {
+    const conhecidos = ["CONFIRMADO", "ENTREGUE", "REAGENDADO"];
+    const st = conhecidos.indexOf(status) >= 0 ? status : "OUTRO";
+    return '<span class="badge badge-st-' + st + '">' + (status || "—") + "</span>";
+  }
+
+  function formataBR(iso) {
+    if (!iso || !/^\d{4}-\d{2}-\d{2}/.test(String(iso))) return "—";
+    const [ano, mes, dia] = String(iso).slice(0, 10).split("-");
+    return dia + "/" + mes + "/" + ano;
+  }
+
+  function hojeIso() {
+    const d = new Date();
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+
+  // Legendas do cadastro (grupo/subgrupo/ciclo vem em sigla nos dados; o
+  // codigo permanece o valor do filtro, so' o texto mostrado muda).
+  const NOMES_GRUPO = {
+    CRT: "Cortina", FAN: "Fancolete", FIX: "Fixo", INV: "Inverter",
+    LCFI: "Linha Comercial Fixo", LCIN: "Linha Comercial Inverter",
+    MSP: "Multi-Split", SPT: "Splitão", VRF: "VRF", VT: "Ventilador",
+  };
+  const NOMES_SUBGRUPO = {
+    BDG: "Bomba Drenagem", CLI: "Climatizador", CMP: "Componente", COND: "Condensadora",
+    CRT: "Cortina", CTR: "Controle", DUT: "Duto", HED: "Header", HW: "Hi Wall",
+    JAN: "Janela", K71: "K7 1 via", K72: "K7 2 vias", "K7-360": "K7-360",
+    K74: "K7 4 vias", "K74-M": "K74 vias Mini", KIT: "Kits",
+    "MOD.SERP": "Módulo Serpentina", "MOD.VENT": "Módulo Ventilador",
+    PISO: "Piso", PT: "Piso Teto", REC: "Receptor", REF: "Refinete",
+    "REF-EXT": "Refinete Externo", SPT: "Splitão", TETO: "Teto",
+  };
+  const NOMES_CICLO = { F: "Frio", QF: "Quente/Frio" };
+  function nomeGrupo(c) { return NOMES_GRUPO[c] || c || ""; }
+  function nomeSubgrupo(c) { return NOMES_SUBGRUPO[c] || c || ""; }
+  function nomeCiclo(c) { return NOMES_CICLO[c] || c || ""; }
+
+  // Coleta (data de emissao da NF, nos itens "sem agenda") vem em dd/mm/aa.
+  function parseColetaBR(str) {
+    const m = /^(\d{2})\/(\d{2})\/(\d{2})$/.exec(str || "");
+    if (!m) return null;
+    return new Date(2000 + Number(m[3]), Number(m[2]) - 1, Number(m[1]));
+  }
+
+  // Ha quanto tempo uma NF faturada esta esperando agenda - mesma ideia do
+  // painel de prazos (build/painel_prazos.py), so que aqui e' "dias desde a
+  // coleta" com limiares fixos, nao a media historica por transportadora
+  // (nao ha "prazo esperado" pra ganhar agenda, so' o quanto mais cedo melhor).
+  const LIMIARES_ESPERA = { alerta: 8, critica: 16 };
+  function situacaoEspera(coleta) {
+    const data = parseColetaBR(coleta);
+    if (!data) return { dias: null, classe: "" };
+    const dias = Math.floor((new Date().setHours(0, 0, 0, 0) - data) / 86400000);
+    if (dias >= LIMIARES_ESPERA.critica) return { dias, classe: "situacao-critica" };
+    if (dias >= LIMIARES_ESPERA.alerta) return { dias, classe: "situacao-alerta" };
+    return { dias, classe: "" };
+  }
+
+  // ------------------------------------------------------------ calendario --
+  // Adaptado de build/app/ui.js (abreCalendario), fixo na pagina em vez de
+  // modal. Fonte: calendario.csv (gerado por gerar_site.py direto da
+  // planilha - o VEICULOS e FABRICANTES de cada dia ja vem prontos de la,
+  // nao precisa re-somar nada aqui).
+
+  const NOMES_MES = ["janeiro", "fevereiro", "março", "abril", "maio", "junho",
+    "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"];
+  const DIAS_SEMANA = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
+  const LIMITE_VEICULOS_DIA = 5;
+
+  // "25/09/26" -> "2026-09-25". calendario.csv sempre traz ano de 2 digitos.
+  function isoDeDataBR(str) {
+    const m = /^(\d{2})\/(\d{2})\/(\d{2})$/.exec(str || "");
+    if (!m) return null;
+    return "20" + m[3] + "-" + m[2] + "-" + m[1];
+  }
+
+  function porDiaDeCalendario(linhasCalendario) {
+    const porDia = {};
+    (linhasCalendario || []).forEach(function (l) {
+      const iso = isoDeDataBR(l[0]);
+      if (!iso) return;
+      porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "" };
+    });
+    return porDia;
+  }
+
+  function iniciaCalendario(linhasCalendario, aoClicarDia) {
+    const porDia = porDiaDeCalendario(linhasCalendario);
+    let mesExibido = new Date();
+    mesExibido.setDate(1);
+
+    const grade = document.getElementById("calGrade");
+    const rotulo = document.getElementById("calRotuloMes");
+
+    function render() {
+      const ano = mesExibido.getFullYear();
+      const mes = mesExibido.getMonth();
+      rotulo.textContent = NOMES_MES[mes] + " de " + ano;
+
+      const primeiroDiaSemana = new Date(ano, mes, 1).getDay();
+      const diasNoMes = new Date(ano, mes + 1, 0).getDate();
+      const hoje = hojeIso();
+
+      let html = DIAS_SEMANA.map(function (d) { return '<div class="cabecalho">' + d + "</div>"; }).join("");
+      for (let i = 0; i < primeiroDiaSemana; i++) html += '<div class="dia vazio"></div>';
+
+      for (let dia = 1; dia <= diasNoMes; dia++) {
+        const iso = ano + "-" + String(mes + 1).padStart(2, "0") + "-" + String(dia).padStart(2, "0");
+        const info = porDia[iso];
+        const tags = info ? info.fabricantesTxt.split(/\s+/).filter(Boolean).map(function (f) {
+          return '<span class="tag-fab">' + f + "</span>";
+        }).join("") : "";
+        const total = info ? info.veiculos : 0;
+        const classes = "dia" + (iso === hoje ? " hoje" : "") + (total >= LIMITE_VEICULOS_DIA ? " cheio" : "");
+        html += '<div class="' + classes + '" data-iso="' + iso + '"><div class="numero">' + dia + "</div>" + tags +
+          (total ? '<span class="total-dia">' + total + " veíc.</span>" : "") + "</div>";
+      }
+      grade.innerHTML = html;
+    }
+
+    grade.addEventListener("click", function (e) {
+      const cel = e.target.closest(".dia[data-iso]");
+      if (cel && aoClicarDia) aoClicarDia(cel.dataset.iso);
+    });
+    document.getElementById("calAnterior").addEventListener("click", function () {
+      mesExibido.setMonth(mesExibido.getMonth() - 1);
+      render();
+    });
+    document.getElementById("calSeguinte").addEventListener("click", function () {
+      mesExibido.setMonth(mesExibido.getMonth() + 1);
+      render();
+    });
+    document.getElementById("calHoje").addEventListener("click", function () {
+      mesExibido = new Date();
+      mesExibido.setDate(1);
+      render();
+    });
+    render();
+  }
+
+  // -------------------------------------------------------------- produtos --
+  // Um mesmo mecanismo de filtro pras duas abas (com agenda / sem agenda),
+  // parametrizado pelo prefixo dos ids e pelas colunas de cada tabela.
+
+  function paraCsv(cabecalho, linhas) {
+    const escapa = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+    return [cabecalho, ...linhas].map(l => l.map(escapa).join(";")).join("\r\n");
+  }
+
+  function baixaCsv(nomeArquivo, cabecalho, linhas) {
+    const csv = "﻿" + paraCsv(cabecalho, linhas);
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = nomeArquivo;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function distintos(itens, campo, numerico) {
+    const vs = [...new Set(itens.map(i => i[campo]).filter(Boolean))];
+    return numerico ? vs.sort((a, b) => Number(a) - Number(b)) : vs.sort();
+  }
+
+  function opcoes(select, valores, rotulo) {
+    const atual = select.value;
+    const texto = rotulo || (v => v);
+    select.innerHTML = '<option value="">Todos</option>' +
+      valores.map(v => '<option value="' + v + '">' + texto(v) + "</option>").join("");
+    if (valores.indexOf(atual) >= 0) select.value = atual;
+  }
+
+  function iniciaFiltroProdutos(cfg) {
+    // cfg: { itens, selFabricante, selGrupo, selSubgrupo, selBtus, selStatus(opcional),
+    //        selData(opcional, input type=date), campoBusca, tbody, contagem, btnLimpar,
+    //        btnExportar, linhaHtml, camposBusca(fn), csv: {nomeBase, cabecalho, linha(fn)},
+    //        filtroInicial(fn, opcional), ths(NodeList, opcional) + colunas(array, opcional) -
+    //        colunas[i] = { valor(it), numero(bool) }, na mesma ordem dos <th> }
+    let ordenar = null; // { indice, dir: 1|-1 } - null = ordem natural (a do array `itens`)
+
+    function aplicaOrdenacao(lista) {
+      if (!ordenar || !cfg.colunas) return lista;
+      const col = cfg.colunas[ordenar.indice];
+      if (!col) return lista;
+      return lista.slice().sort((a, b) => {
+        const va = col.valor(a), vb = col.valor(b);
+        const cmp = col.numero ? (va - vb) : String(va).localeCompare(String(vb), "pt-BR", { numeric: true, sensitivity: "base" });
+        return ordenar.dir * cmp;
+      });
+    }
+
+    function passaFiltros(it) {
+      if (cfg.selFabricante.value && it.fabricante !== cfg.selFabricante.value) return false;
+      if (cfg.selGrupo.value && it.grupo !== cfg.selGrupo.value) return false;
+      if (cfg.selSubgrupo.value && it.subgrupo !== cfg.selSubgrupo.value) return false;
+      if (cfg.selBtus.value && it.btus !== cfg.selBtus.value) return false;
+      if (cfg.selCiclo && cfg.selCiclo.value && it.ciclo !== cfg.selCiclo.value) return false;
+      if (cfg.selStatus && cfg.selStatus.value && it.status !== cfg.selStatus.value) return false;
+      if (cfg.selData && cfg.selData.value && String(it.data || "").slice(0, 10) !== cfg.selData.value) return false;
+      const busca = cfg.campoBusca.value.trim().toLowerCase();
+      if (busca && !cfg.camposBusca(it).toLowerCase().includes(busca)) return false;
+      return true;
+    }
+
+    function filtrados() { return cfg.itens.filter(passaFiltros); }
+
+    function render() {
+      const lista = aplicaOrdenacao(filtrados());
+      cfg.tbody.innerHTML = lista.map(cfg.linhaHtml).join("");
+      cfg.contagem.textContent = lista.length + " item(ns)";
+    }
+
+    function preencheFiltros() {
+      opcoes(cfg.selFabricante, distintos(cfg.itens, "fabricante"));
+      opcoes(cfg.selGrupo, distintos(cfg.itens, "grupo"), nomeGrupo);
+      opcoes(cfg.selSubgrupo, distintos(cfg.itens, "subgrupo"), nomeSubgrupo);
+      opcoes(cfg.selBtus, distintos(cfg.itens, "btus", true));
+      if (cfg.selCiclo) opcoes(cfg.selCiclo, distintos(cfg.itens, "ciclo"), nomeCiclo);
+      if (cfg.selStatus) opcoes(cfg.selStatus, distintos(cfg.itens, "status"));
+    }
+
+    const controles = [cfg.selFabricante, cfg.selGrupo, cfg.selSubgrupo, cfg.selBtus];
+    if (cfg.selCiclo) controles.push(cfg.selCiclo);
+    if (cfg.selStatus) controles.push(cfg.selStatus);
+    if (cfg.selData) controles.push(cfg.selData);
+    controles.forEach(s => s.addEventListener("change", render));
+    cfg.campoBusca.addEventListener("input", render);
+
+    cfg.btnLimpar.addEventListener("click", () => {
+      controles.forEach(s => { s.value = ""; });
+      cfg.campoBusca.value = "";
+      render();
+    });
+
+    cfg.btnExportar.addEventListener("click", () => {
+      const lista = filtrados();
+      if (!lista.length) { alert("Nada pra exportar com esses filtros."); return; }
+      const hoje = new Date();
+      const nome = cfg.csv.nomeBase + "_" + hoje.getFullYear() +
+        String(hoje.getMonth() + 1).padStart(2, "0") + String(hoje.getDate()).padStart(2, "0") + ".csv";
+      baixaCsv(nome, cfg.csv.cabecalho, lista.map(cfg.csv.linha));
+    });
+
+    if (cfg.ths && cfg.colunas) {
+      cfg.ths.forEach((th, i) => {
+        if (!cfg.colunas[i]) return;
+        th.classList.add("ordenavel");
+        th.addEventListener("click", () => {
+          ordenar = (ordenar && ordenar.indice === i) ? { indice: i, dir: -ordenar.dir } : { indice: i, dir: 1 };
+          cfg.ths.forEach(t => t.removeAttribute("data-ordem"));
+          th.setAttribute("data-ordem", ordenar.dir === 1 ? "asc" : "desc");
+          render();
+        });
+      });
+    }
+
+    preencheFiltros();
+    if (cfg.filtroInicial) cfg.filtroInicial();
+    render();
+
+    return {
+      // Usado pelo clique num dia do calendario: abre esta aba ja filtrada por data.
+      filtrarPorData: cfg.selData ? function (iso) {
+        controles.forEach(s => { if (s !== cfg.selData) s.value = ""; });
+        cfg.campoBusca.value = "";
+        cfg.selData.value = iso;
+        render();
+      } : null,
+    };
+  }
+
+  function unificadoHtml(it) {
+    if (!it.unificado_codigo) return "—";
+    const codigos = it.unificado_codigo.split(",").map(c => c.trim()).filter(Boolean);
+    const desc = it.unificado_descricao || "";
+    const descAttr = desc.replace(/"/g, "&quot;");
+    if (codigos.length <= 2) {
+      return '<span title="' + descAttr + '">' + codigos.join(", ") + " — " + desc + "</span>";
+    }
+    // Mais de 2 conjuntos (chega a 30+): mostra so' os 2 primeiros + um
+    // <details> pra ver o resto - a descricao ja' vem com "(+N)" do servidor
+    // (enriquece_com_unificado em build/app/servidor.py), entao nao repete a contagem aqui.
+    return '<details class="unificado-mais">' +
+      '<summary title="' + descAttr + '">' + codigos.slice(0, 2).join(", ") + "... — " + desc + "</summary>" +
+      '<div class="unificado-resto">' + codigos.join(", ") + "</div>" +
+      "</details>";
+  }
+
+  function iniciaAgenda(itensTodos) {
+    const itens = itensTodos.filter(i => i.agendado);
+    return iniciaFiltroProdutos({
+      itens,
+      selFabricante: document.getElementById("agFabricante"),
+      selGrupo: document.getElementById("agGrupo"),
+      selSubgrupo: document.getElementById("agSubgrupo"),
+      selBtus: document.getElementById("agBtus"),
+      selCiclo: document.getElementById("agCiclo"),
+      selStatus: document.getElementById("agStatus"),
+      selData: document.getElementById("agData"),
+      campoBusca: document.getElementById("agBusca"),
+      tbody: document.querySelector("#tabelaAgenda tbody"),
+      ths: document.querySelectorAll("#tabelaAgenda thead th"),
+      colunas: [
+        { valor: it => it.status || "" },
+        { valor: it => it.data || "" },
+        { valor: it => it.fabricante || "" },
+        { valor: it => (it.nfs || []).join(", ") },
+        { valor: it => it.codigo_interno || it.codigo_fabricante || "" },
+        { valor: it => it.descricao || "" },
+        { valor: it => nomeGrupo(it.grupo) },
+        { valor: it => nomeSubgrupo(it.subgrupo) },
+        { valor: it => Number(it.btus) || 0, numero: true },
+        { valor: it => nomeCiclo(it.ciclo) },
+        { valor: it => Number(it.qtd) || 0, numero: true },
+        { valor: it => it.transportadora || "" },
+        { valor: it => it.unificado_codigo || "" },
+      ],
+      contagem: document.getElementById("agContagem"),
+      btnLimpar: document.getElementById("agLimpar"),
+      btnExportar: document.getElementById("agExportar"),
+      camposBusca: it => ((it.nfs || []).join(" ") + " " + (it.codigo_interno || "") + " " + (it.codigo_fabricante || "") +
+        " " + (it.descricao || "") + " " + (it.unificado_codigo || "") + " " + (it.unificado_descricao || "")),
+      linhaHtml: it => {
+        const codigo = it.codigo_interno || (it.codigo_fabricante ? "(" + it.codigo_fabricante + ")" : "—");
+        return "<tr>" +
+          "<td>" + badge(it.status) + "</td>" +
+          "<td>" + formataBR(it.data) + "</td>" +
+          "<td>" + (it.fabricante || "—") + "</td>" +
+          "<td>" + ((it.nfs || []).join(", ") || "—") + "</td>" +
+          "<td>" + codigo + "</td>" +
+          "<td>" + (it.descricao || "—") + "</td>" +
+          "<td>" + (it.grupo ? nomeGrupo(it.grupo) : "—") + "</td>" +
+          "<td>" + (it.subgrupo ? nomeSubgrupo(it.subgrupo) : "—") + "</td>" +
+          "<td>" + (it.btus || "—") + "</td>" +
+          "<td>" + (it.ciclo ? nomeCiclo(it.ciclo) : "—") + "</td>" +
+          "<td>" + (it.qtd != null ? it.qtd : "—") + "</td>" +
+          "<td>" + (it.transportadora || "—") + "</td>" +
+          "<td>" + unificadoHtml(it) + "</td>" +
+          "</tr>";
+      },
+      csv: {
+        nomeBase: "produtos_com_agenda",
+        cabecalho: ["STATUS", "DATA", "FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "TRANSPORTADORA", "UNIFICADO"],
+        linha: it => [it.status, formataBR(it.data), it.fabricante, (it.nfs || []).join(" "),
+          it.codigo_interno || it.codigo_fabricante, it.descricao, nomeGrupo(it.grupo), nomeSubgrupo(it.subgrupo),
+          it.btus, nomeCiclo(it.ciclo), it.qtd, it.transportadora, it.unificado_codigo],
+      },
+      // Ao abrir a aba, mostra so os confirmados - e o que interessa no dia a
+      // dia; os outros status (entregue, reagendado...) ficam a 1 clique.
+      filtroInicial: () => { document.getElementById("agStatus").value = "CONFIRMADO"; },
+    });
+  }
+
+  function iniciaSemAgenda(itensTodos) {
+    // Mais antigo primeiro - e' quem esta esperando agenda ha mais tempo,
+    // o que importa de verdade nessa lista. Sem coleta legivel vai pro final.
+    const itens = itensTodos.filter(i => !i.agendado).slice().sort((a, b) => {
+      const da = parseColetaBR(a.coleta), db = parseColetaBR(b.coleta);
+      if (!da && !db) return 0;
+      if (!da) return 1;
+      if (!db) return -1;
+      return da - db;
+    });
+    iniciaFiltroProdutos({
+      itens,
+      selFabricante: document.getElementById("saFabricante"),
+      selGrupo: document.getElementById("saGrupo"),
+      selSubgrupo: document.getElementById("saSubgrupo"),
+      selBtus: document.getElementById("saBtus"),
+      selCiclo: document.getElementById("saCiclo"),
+      campoBusca: document.getElementById("saBusca"),
+      tbody: document.querySelector("#tabelaSemAgenda tbody"),
+      ths: document.querySelectorAll("#tabelaSemAgenda thead th"),
+      colunas: [
+        { valor: it => it.fabricante || "" },
+        { valor: it => (it.nfs || []).join(", ") },
+        { valor: it => it.codigo_interno || it.codigo_fabricante || "" },
+        { valor: it => it.descricao || "" },
+        { valor: it => nomeGrupo(it.grupo) },
+        { valor: it => nomeSubgrupo(it.subgrupo) },
+        { valor: it => Number(it.btus) || 0, numero: true },
+        { valor: it => nomeCiclo(it.ciclo) },
+        { valor: it => Number(it.qtd) || 0, numero: true },
+        { valor: it => { const d = parseColetaBR(it.coleta); return d ? d.getTime() : Infinity; }, numero: true },
+        { valor: it => it.transportadora || "" },
+        { valor: it => it.unificado_codigo || "" },
+      ],
+      contagem: document.getElementById("saContagem"),
+      btnLimpar: document.getElementById("saLimpar"),
+      btnExportar: document.getElementById("saExportar"),
+      camposBusca: it => ((it.nfs || []).join(" ") + " " + (it.codigo_interno || "") + " " + (it.codigo_fabricante || "") + " " +
+        (it.descricao || "") + " " + (it.unificado_codigo || "") + " " + (it.unificado_descricao || "")),
+      linhaHtml: it => {
+        const codigo = it.codigo_interno || (it.codigo_fabricante ? "(" + it.codigo_fabricante + ")" : "—");
+        const espera = situacaoEspera(it.coleta);
+        const coletaTxt = it.coleta ? it.coleta + (espera.dias != null ? " (" + espera.dias + "d)" : "") : "—";
+        return "<tr class=\"" + espera.classe + "\">" +
+          "<td>" + (it.fabricante || "—") + "</td>" +
+          "<td>" + ((it.nfs || []).join(", ") || "—") + "</td>" +
+          "<td>" + codigo + "</td>" +
+          "<td>" + (it.descricao || "—") + "</td>" +
+          "<td>" + (it.grupo ? nomeGrupo(it.grupo) : "—") + "</td>" +
+          "<td>" + (it.subgrupo ? nomeSubgrupo(it.subgrupo) : "—") + "</td>" +
+          "<td>" + (it.btus || "—") + "</td>" +
+          "<td>" + (it.ciclo ? nomeCiclo(it.ciclo) : "—") + "</td>" +
+          "<td>" + (it.qtd != null ? it.qtd : "—") + "</td>" +
+          "<td>" + coletaTxt + "</td>" +
+          "<td>" + (it.transportadora || "—") + "</td>" +
+          "<td>" + unificadoHtml(it) + "</td>" +
+          "</tr>";
+      },
+      csv: {
+        nomeBase: "faturados_sem_agenda",
+        cabecalho: ["FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "COLETA", "TRANSPORTADORA", "UNIFICADO"],
+        linha: it => [it.fabricante, (it.nfs || []).join(" "), it.codigo_interno || it.codigo_fabricante,
+          it.descricao, nomeGrupo(it.grupo), nomeSubgrupo(it.subgrupo), it.btus, nomeCiclo(it.ciclo), it.qtd,
+          it.coleta, it.transportadora, it.unificado_codigo],
+      },
+    });
+  }
+
+  // ------------------------------------------------------------- resumo --
+
+  function cartaoResumo(num, rotulo, aba, alerta) {
+    return '<a href="#" class="resumo-item' + (alerta ? " resumo-alerta" : "") + '" data-aba="' + aba + '">' +
+      '<span class="resumo-num">' + num + "</span>" +
+      '<span class="resumo-rotulo">' + rotulo + "</span>" +
+      "</a>";
+  }
+
+  function iniciaResumo(linhasCalendario, produtos) {
+    const itens = produtos.itens || [];
+    const confirmados = itens.filter(it => it.agendado && it.status === "CONFIRMADO").length;
+    const semAgenda = itens.filter(it => !it.agendado).length;
+    const semAgendaCritica = itens.filter(it => !it.agendado && situacaoEspera(it.coleta).classe === "situacao-critica").length;
+    const hojeInfo = porDiaDeCalendario(linhasCalendario)[hojeIso()];
+    const veiculosHoje = hojeInfo ? hojeInfo.veiculos : 0;
+
+    const resumo = document.getElementById("resumoTopo");
+    resumo.innerHTML =
+      cartaoResumo(confirmados, "confirmado(s)", "agenda") +
+      cartaoResumo(semAgenda, "aguardando agenda", "sem-agenda", semAgenda > 0) +
+      cartaoResumo(semAgendaCritica, "esperando 16+ dias", "sem-agenda", semAgendaCritica > 0) +
+      cartaoResumo(veiculosHoje, "veículo(s) hoje", "calendario");
+
+    resumo.querySelectorAll(".resumo-item").forEach(function (el) {
+      el.addEventListener("click", function (e) {
+        e.preventDefault();
+        mostraAba(el.dataset.aba);
+      });
+    });
+  }
+
+  // ----------------------------------------------------------------- boot --
+
+  Promise.all([
+    carregarCSV("calendario.csv"),
+    fetch("produtos.json").then(r => r.json()),
+  ]).then(([calendario, produtos]) => {
+    const controladorAgenda = iniciaAgenda(produtos.itens || []);
+    iniciaSemAgenda(produtos.itens || []);
+    iniciaCalendario(calendario.linhas, function (iso) {
+      mostraAba("agenda");
+      if (controladorAgenda.filtrarPorData) controladorAgenda.filtrarPorData(iso);
+    });
+    iniciaResumo(calendario.linhas, produtos);
+    document.getElementById("ultimaAtualizacao").textContent = produtos.gerado_em || "(não disponível)";
+  }).catch(erro => {
+    console.error(erro);
+    document.getElementById("ultimaAtualizacao").textContent = "falha ao carregar";
+  });
+})();
