@@ -214,6 +214,20 @@
     if (valores.indexOf(atual) >= 0) select.value = atual;
   }
 
+  // CONFIRMADO e REAGENDADO sao as duas faces da mesma pergunta pro usuario
+  // ("ja chegou ou nao?") - REAGENDADO so' existe como registro historico
+  // (o antigo, quando uma NF e remarcada), nunca como estado final. Por isso
+  // o filtro junta os dois num "Nao entregue" em vez de listar os status
+  // crus (pedido do usuario, 01/10/2026 - mesma simplificacao feita na tela
+  // de Lancamento).
+  function opcoesStatus(select) {
+    const atual = select.value;
+    select.innerHTML = '<option value="">Todos</option>' +
+      '<option value="NAO_ENTREGUE">Não entregue</option>' +
+      '<option value="ENTREGUE">ENTREGUE</option>';
+    if (["", "NAO_ENTREGUE", "ENTREGUE"].indexOf(atual) >= 0) select.value = atual;
+  }
+
   function iniciaFiltroProdutos(cfg) {
     // cfg: { itens, selFabricante, selGrupo, selSubgrupo, selBtus, selStatus(opcional),
     //        selData(opcional, input type=date), campoBusca, tbody, contagem, btnLimpar,
@@ -239,7 +253,11 @@
       if (cfg.selSubgrupo.value && it.subgrupo !== cfg.selSubgrupo.value) return false;
       if (cfg.selBtus.value && it.btus !== cfg.selBtus.value) return false;
       if (cfg.selCiclo && cfg.selCiclo.value && it.ciclo !== cfg.selCiclo.value) return false;
-      if (cfg.selStatus && cfg.selStatus.value && it.status !== cfg.selStatus.value) return false;
+      if (cfg.selStatus && cfg.selStatus.value) {
+        if (cfg.selStatus.value === "NAO_ENTREGUE") {
+          if (it.status === "ENTREGUE") return false;
+        } else if (it.status !== cfg.selStatus.value) return false;
+      }
       if (cfg.selData && cfg.selData.value && String(it.data || "").slice(0, 10) !== cfg.selData.value) return false;
       const busca = cfg.campoBusca.value.trim().toLowerCase();
       if (busca && !cfg.camposBusca(it).toLowerCase().includes(busca)) return false;
@@ -260,7 +278,7 @@
       opcoes(cfg.selSubgrupo, distintos(cfg.itens, "subgrupo"), nomeSubgrupo);
       opcoes(cfg.selBtus, distintos(cfg.itens, "btus", true));
       if (cfg.selCiclo) opcoes(cfg.selCiclo, distintos(cfg.itens, "ciclo"), nomeCiclo);
-      if (cfg.selStatus) opcoes(cfg.selStatus, distintos(cfg.itens, "status"));
+      if (cfg.selStatus) opcoesStatus(cfg.selStatus);
     }
 
     const controles = [cfg.selFabricante, cfg.selGrupo, cfg.selSubgrupo, cfg.selBtus];
@@ -393,9 +411,9 @@
           it.codigo_interno || it.codigo_fabricante, it.descricao, nomeGrupo(it.grupo), nomeSubgrupo(it.subgrupo),
           it.btus, nomeCiclo(it.ciclo), it.qtd, it.transportadora, it.unificado_codigo],
       },
-      // Ao abrir a aba, mostra so os confirmados - e o que interessa no dia a
-      // dia; os outros status (entregue, reagendado...) ficam a 1 clique.
-      filtroInicial: () => { document.getElementById("agStatus").value = "CONFIRMADO"; },
+      // Ao abrir a aba, mostra so os nao entregues - e o que interessa no
+      // dia a dia; ENTREGUE fica a 1 clique.
+      filtroInicial: () => { document.getElementById("agStatus").value = "NAO_ENTREGUE"; },
     });
   }
 
