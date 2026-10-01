@@ -1,2 +1,6 @@
-# GERADO_EM=01/10/2026 13:35
+# GERADO_EM=01/10/2026 13:57
 TRANSPORTADORA,FABRICANTE,NFS,MEDIA,MEDIANA,P90,MAXIMO
+BUSSOLA,"(media historica, todos)",,23.2,21,32,35
+BRASIL WEB,"(media historica, todos)",,8,8,8,8
+SUPERSONIC,"(media historica, todos)",,15.3,13.0,19,19
+BERTOLINI,"(media historica, todos)",,16.8,17.0,17,17
