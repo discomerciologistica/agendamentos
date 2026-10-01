@@ -60,7 +60,10 @@
   function nomeSubgrupo(c) { return NOMES_SUBGRUPO[c] || c || ""; }
   function nomeCiclo(c) { return NOMES_CICLO[c] || c || ""; }
 
-  // Coleta (data de emissao da NF, nos itens "sem agenda") vem em dd/mm/aa.
+  // Campo interno ainda se chama "coleta", mas o valor e' a data de
+  // FATURAMENTO (emissao da NF) - a coleta fisica acontece uns 1-2 dias
+  // depois, por isso a tela mostra "Faturamento" (pedido do usuario,
+  // 01/10/2026). Vem em dd/mm/aa.
   function parseColetaBR(str) {
     const m = /^(\d{2})\/(\d{2})\/(\d{2})$/.exec(str || "");
     if (!m) return null;
@@ -452,7 +455,7 @@
       },
       csv: {
         nomeBase: "faturados_sem_agenda",
-        cabecalho: ["FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "COLETA", "TRANSPORTADORA", "UNIFICADO"],
+        cabecalho: ["FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "FATURAMENTO", "TRANSPORTADORA", "UNIFICADO"],
         linha: it => [it.fabricante, (it.nfs || []).join(" "), it.codigo_interno || it.codigo_fabricante,
           it.descricao, nomeGrupo(it.grupo), nomeSubgrupo(it.subgrupo), it.btus, nomeCiclo(it.ciclo), it.qtd,
           it.coleta, it.transportadora, it.unificado_codigo],
