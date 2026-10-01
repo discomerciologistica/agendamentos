@@ -1092,6 +1092,12 @@ html[data-tema="escuro"] .menu-acoes-lista button {
 .calendario .dia.cheio .total-dia { color: var(--alerta); }
 .calendario .dia.cheio .total-dia::before { content: "● "; }
 
+.calendario .dia .check-entregue {
+  color: var(--ok);
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
 
 /* ---------- Faixa: servidor desligado ---------- */
 

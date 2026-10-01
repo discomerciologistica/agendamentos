@@ -112,8 +112,12 @@
       // outra coisa (texto tipo "4 CARRETAS"), entao NAO da' pra usar "tem texto
       // em OBS?" como sinal de bloqueio (bug corrigido em 30/09/2026: isso
       // marcava quase todo dia com entrega como bloqueado/vermelho por engano).
+      // Coluna 6 (TUDO_ENTREGUE) so' existe no calendario.csv gerado a partir
+      // de dados.json (painel-teste/beta) - a planilha real ainda nao tem
+      // esse conceito por dia, entao fica undefined/"" la' e nunca marca.
       porDia[iso] = { veiculos: Number(l[2]) || 0, fabricantesTxt: l[3] || "",
-                       motivoBloqueio: l[4] === "BLOQUEADO" ? (l[5] || "") : "" };
+                       motivoBloqueio: l[4] === "BLOQUEADO" ? (l[5] || "") : "",
+                       tudoEntregue: l[6] === "SIM" };
     });
     return porDia;
   }
@@ -146,9 +150,11 @@
         }).join("") : "";
         const total = info ? info.veiculos : 0;
         const motivo = info ? info.motivoBloqueio : "";
+        const entregue = info ? info.tudoEntregue : false;
         const classes = "dia" + (iso === hoje ? " hoje" : "") + (total >= LIMITE_VEICULOS_DIA ? " cheio" : "") +
           (motivo ? " bloqueado" : "");
-        html += '<div class="' + classes + '" data-iso="' + iso + '"><div class="numero">' + dia + "</div>" + tags +
+        html += '<div class="' + classes + '" data-iso="' + iso + '"><div class="numero">' + dia +
+          (entregue ? ' <span class="check-entregue" title="Tudo entregue">✓</span>' : "") + "</div>" + tags +
           (motivo ? '<span class="tag-bloqueio">' + motivo + "</span>" : "") +
           (total ? '<span class="total-dia">' + total + " veíc.</span>" : "") + "</div>";
       }
