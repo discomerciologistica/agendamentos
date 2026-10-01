@@ -515,7 +515,7 @@
 
   Promise.all([
     carregarCSV("calendario.csv"),
-    fetch("produtos.json").then(r => r.json()),
+    fetch("produtos.json?v=" + Date.now(), { cache: "no-store" }).then(r => r.json()),
   ]).then(([calendario, produtos]) => {
     const controladorAgenda = iniciaAgenda(produtos.itens || []);
     iniciaSemAgenda(produtos.itens || []);
