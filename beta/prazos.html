@@ -84,7 +84,7 @@
       .then(([resumo, abertas]) => {
         preenche("resumoHeader", "resumoBody", resumo.cabecalho, resumo.linhas);
         const tbody = preenche("abertasHeader", "abertasBody",
-                               abertas.cabecalho, abertas.linhas, 5);
+                               abertas.cabecalho, abertas.linhas, abertas.cabecalho.indexOf("SITUACAO"));
 
         const titulo = document.getElementById("tituloAbertas");
         titulo.textContent = `${abertas.linhas.length} NF(s) em aberto`;

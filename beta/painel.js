@@ -322,7 +322,11 @@
   }
 
   function iniciaAgenda(itensTodos) {
-    const itens = itensTodos.filter(i => i.agendado);
+    // Ultimo agendado primeiro (mais interessa o que mudou mais recente na
+    // agenda); quem nao tem data (raro, deveria ter sempre) vai pro final.
+    const itens = itensTodos.filter(i => i.agendado).slice().sort((a, b) => {
+      return (b.data || "").localeCompare(a.data || "");
+    });
     return iniciaFiltroProdutos({
       itens,
       selFabricante: document.getElementById("agFabricante"),
@@ -387,14 +391,16 @@
   }
 
   function iniciaSemAgenda(itensTodos) {
-    // Mais antigo primeiro - e' quem esta esperando agenda ha mais tempo,
-    // o que importa de verdade nessa lista. Sem coleta legivel vai pro final.
+    // Ultimo faturado primeiro (pedido do usuario, 01/10/2026). Sem coleta
+    // legivel vai pro final. O destaque de espera (situacaoEspera, amarelo/
+    // vermelho) continua valendo pros itens antigos mesmo fora do topo -
+    // so' a ordem padrao da lista mudou, nao o calculo de quem esta atrasado.
     const itens = itensTodos.filter(i => !i.agendado).slice().sort((a, b) => {
       const da = parseColetaBR(a.coleta), db = parseColetaBR(b.coleta);
       if (!da && !db) return 0;
       if (!da) return 1;
       if (!db) return -1;
-      return da - db;
+      return db - da;
     });
     iniciaFiltroProdutos({
       itens,
