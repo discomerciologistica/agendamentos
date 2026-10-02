@@ -22,6 +22,18 @@
     btn.addEventListener("click", function () { mostraAba(btn.dataset.aba); });
   });
 
+  // Botoes "?" que explicam os campos de cada tela - um painel-ajuda por
+  // botao, identificado por data-alvo. So' alterna visibilidade, nada mais.
+  document.querySelectorAll(".botao-ajuda[data-alvo]").forEach(function (btn) {
+    const painel = document.getElementById(btn.dataset.alvo);
+    if (!painel) return;
+    btn.addEventListener("click", function () {
+      const aberto = !painel.hidden;
+      painel.hidden = aberto;
+      btn.setAttribute("aria-expanded", String(!aberto));
+    });
+  });
+
   function badge(status) {
     const conhecidos = ["CONFIRMADO", "ENTREGUE", "REAGENDADO"];
     const st = conhecidos.indexOf(status) >= 0 ? status : "OUTRO";

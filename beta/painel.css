@@ -289,6 +289,44 @@ h2 .botao-secundario, h3 .botao-secundario {
 
 .status-inline { font-size: 0.86rem; color: var(--tinta-3); }
 
+/* ---------- Ajuda (explicacao dos campos de cada tela) ---------- */
+
+.botao-ajuda {
+  width: 26px;
+  height: 26px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--superficie);
+  border: 1px solid var(--borda-forte);
+  color: var(--tinta-2);
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1;
+  cursor: pointer;
+  flex: none;
+}
+.botao-ajuda:hover, .botao-ajuda[aria-expanded="true"] {
+  background: var(--acento-claro);
+  border-color: var(--acento);
+  color: var(--acento-escuro);
+}
+
+.painel-ajuda {
+  margin: 10px 0 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--borda);
+  border-left: 3px solid var(--acento);
+  border-radius: var(--raio-p);
+  background: var(--superficie-2);
+  font-size: 0.86rem;
+}
+.painel-ajuda dl { margin: 0; }
+.painel-ajuda dt { font-weight: 600; color: var(--tinta); }
+.painel-ajuda dd { margin: 2px 0 10px; color: var(--tinta-2); }
+.painel-ajuda dd:last-child { margin-bottom: 0; }
+.painel-ajuda p { margin: 0 0 10px; color: var(--tinta-2); }
+.painel-ajuda p:last-child { margin-bottom: 0; }
+
 /* ---------- Tabelas ---------- */
 
 .table-wrapper {
