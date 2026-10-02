@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRAZO DAS TRANSPORTADORAS</title>
+    <link rel="stylesheet" href="painel.css?v=fe269cdd27">
+    <script src="tema.js?v=fe269cdd27"></script>
+</head>
+<body>
+  <div class="pagina">
+    <nav class="nav-telas">
+      <a href="index.html">← Agendamentos</a>
+    </nav>
+
+    <h1>Prazo das transportadoras</h1>
+    <p class="sub">Prazo realizado (emissão → entrega) e notas faturadas que ainda não foram entregues, por transportadora.</p>
+
+    <section class="cartao">
+      <h2>Prazo realizado, da emissão à entrega
+        <button type="button" class="botao-ajuda" data-alvo="ajudaResumo" aria-expanded="false" title="O que significa cada coluna">?</button>
+      </h2>
+      <div class="painel-ajuda" id="ajudaResumo" hidden>
+        <dl>
+          <dt>Como é calculado</dt>
+          <dd>Média de dias entre a emissão da nota e a entrega confirmada, por transportadora + fabricante, só considerando entregas dos últimos 3 meses e frete FOB (quando a empresa contratou a transportadora - em CIF quem contrata é o fabricante, então não faz sentido medir do nosso lado).</dd>
+          <dt>MEDIA / MEDIANA / P90 / MAXIMO</dt>
+          <dd>Estatísticas em dias desse grupo de NFs: média simples, valor do meio (mediana), 90% das entregas aconteceram até esse prazo (P90), e o maior prazo já visto (máximo).</dd>
+        </dl>
+      </div>
+      <div class="table-wrapper">
+        <table id="resumo">
+          <thead><tr id="resumoHeader"></tr></thead>
+          <tbody id="resumoBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="cartao">
+      <h2>NFs faturadas ainda sem entrega
+        <button type="button" class="botao-ajuda" data-alvo="ajudaAbertas" aria-expanded="false" title="O que significa cada coluna">?</button>
+      </h2>
+      <div class="painel-ajuda" id="ajudaAbertas" hidden>
+        <dl>
+          <dt>FATURAMENTO</dt>
+          <dd>Data de emissão da nota fiscal - ainda não tem data de entrega marcada.</dd>
+          <dt>DIAS</dt>
+          <dd>Quantos dias já se passaram desde a emissão até hoje.</dd>
+          <dt>PRAZO MEDIO</dt>
+          <dd>Média histórica (últimos 3 meses) daquela transportadora + fabricante, pra comparar com os DIAS atuais. Fica em branco quando ainda não há dado suficiente.</dd>
+          <dt>SITUACAO</dt>
+          <dd>"Dentro do prazo médio", "acima do prazo médio" (já passou da média) ou "muito atrasada" (passou 50% da média). "Sem referência" quando não há prazo médio pra comparar.</dd>
+        </dl>
+      </div>
+      <div class="grade-campos">
+        <div class="campo campo-busca">
+          <label for="buscaAbertas">Buscar (NF ou transportadora)</label>
+          <input type="text" id="buscaAbertas" placeholder="ex.: 146216, Bussola...">
+        </div>
+      </div>
+      <p id="tituloAbertas" class="status-inline">Carregando...</p>
+      <div class="table-wrapper">
+        <table id="abertas">
+          <thead><tr id="abertasHeader"></tr></thead>
+          <tbody id="abertasBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="sub" style="margin-top:32px; font-size:0.8rem;">Última atualização: <span id="ultimaAtualizacao">--</span></p>
+  </div>
+
+  <script src="csv.js?v=fe269cdd27"></script>
+  <script>
+    // Botoes "?" que explicam as colunas de cada tabela - mesmo padrao do
+    // index.html/painel.js, repetido aqui porque esta pagina nao carrega
+    // painel.js.
+    document.querySelectorAll(".botao-ajuda[data-alvo]").forEach(function (btn) {
+      const painel = document.getElementById(btn.dataset.alvo);
+      if (!painel) return;
+      btn.addEventListener("click", function () {
+        const aberto = !painel.hidden;
+        painel.hidden = aberto;
+        btn.setAttribute("aria-expanded", String(!aberto));
+      });
+    });
+
+    // Classe de cor pela situação, para a linha saltar aos olhos - mesmas
+    // classes .situacao-critica/-alerta/-ok que o resto do site já usa.
+    const CLASSE = {
+      "MUITO ATRASADA": "situacao-critica",
+      "acima do prazo medio": "situacao-alerta",
+      "dentro do prazo": "situacao-ok",
+    };
+
+    function preenche(idCabecalho, idCorpo, cabecalho, linhas, colunaSituacao) {
+      const thead = document.getElementById(idCabecalho);
+      cabecalho.forEach(c => {
+        const th = document.createElement("th");
+        th.textContent = c;
+        thead.appendChild(th);
+      });
+      const tbody = document.getElementById(idCorpo);
+      linhas.forEach(linha => {
+        const tr = document.createElement("tr");
+        if (colunaSituacao !== undefined) {
+          const classe = CLASSE[linha[colunaSituacao]];
+          if (classe) tr.classList.add(classe);
+        }
+        linha.forEach(valor => {
+          const td = document.createElement("td");
+          td.textContent = valor;
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+      return tbody;
+    }
+
+    Promise.all([carregarCSV("prazos_resumo.csv"), carregarCSV("prazos.csv")])
+      .then(([resumo, abertas]) => {
+        preenche("resumoHeader", "resumoBody", resumo.cabecalho, resumo.linhas);
+        const tbody = preenche("abertasHeader", "abertasBody",
+                               abertas.cabecalho, abertas.linhas, abertas.cabecalho.indexOf("SITUACAO"));
+
+        const titulo = document.getElementById("tituloAbertas");
+        titulo.textContent = `${abertas.linhas.length} NF(s) em aberto`;
+        document.getElementById("ultimaAtualizacao").textContent =
+          abertas.atualizadoEm || "(não disponível)";
+
+        document.getElementById("buscaAbertas").addEventListener("input", function () {
+          const termo = this.value.toLowerCase();
+          let visiveis = 0;
+          for (const tr of tbody.getElementsByTagName("tr")) {
+            const combina = tr.textContent.toLowerCase().includes(termo);
+            tr.style.display = combina ? "" : "none";
+            if (combina) visiveis++;
+          }
+          titulo.textContent = termo
+            ? `${visiveis} resultado(s) para "${this.value}"`
+            : `${abertas.linhas.length} NF(s) em aberto`;
+        });
+      })
+      .catch(erro => {
+        document.getElementById("tituloAbertas").textContent =
+          "Não foi possível carregar os prazos.";
+        console.error(erro);
+      });
+  </script>
+</body>
+</html>

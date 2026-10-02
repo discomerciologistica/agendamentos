@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGENDAMENTOS</title>
+  <link rel="stylesheet" href="painel.css?v=fe269cdd27">
+  <script src="tema.js?v=fe269cdd27"></script>
+</head>
+<body>
+  <div class="pagina">
+    <nav class="nav-telas">
+      <button type="button" class="aba ativa" data-aba="calendario">Calendário</button>
+      <button type="button" class="aba" data-aba="agenda">Produtos com agenda</button>
+      <button type="button" class="aba" data-aba="sem-agenda">Faturados sem agenda</button>
+    </nav>
+
+    <h1>Agendamentos</h1>
+    <p class="sub">Consulta - calendário de cargas, itens já agendados e notas faturadas aguardando data. Só consulta, não dá pra editar por aqui.</p>
+
+    <div class="resumo-topo" id="resumoTopo"></div>
+
+    <!-- ===================== Calendário ===================== -->
+    <section id="painelCalendario" class="painel">
+      <section class="cartao">
+        <div class="cal-cabecalho">
+          <h3 id="calRotuloMes"></h3>
+          <span class="linha-botoes">
+            <button type="button" class="botao-secundario" id="calAnterior">◀</button>
+            <button type="button" class="botao-secundario" id="calSeguinte">▶</button>
+            <button type="button" class="botao-secundario" id="calHoje">Hoje</button>
+            <button type="button" class="botao-ajuda" data-alvo="ajudaCalendario" aria-expanded="false" title="O que significa cada coisa aqui">?</button>
+          </span>
+        </div>
+        <div class="painel-ajuda" id="ajudaCalendario" hidden>
+          <dl>
+            <dt>Número do dia e "✓"</dt>
+            <dd>O "✓" verde aparece quando tudo que tinha entrega marcada nesse dia já foi confirmado como ENTREGUE.</dd>
+            <dt>Tags tipo "GREE(2)"</dt>
+            <dd>Fabricante + quantidade de veículos agendados daquele fabricante nesse dia.</dd>
+            <dt>"N veíc." no rodapé do dia</dt>
+            <dd>Total de veículos agendados no dia, somando todos os fabricantes. O dia fica destacado quando passa de 5 veículos.</dd>
+            <dt>Dia marcado (com uma tag de motivo, ex. "Feriado")</dt>
+            <dd>Dia bloqueado manualmente (feriado, inventário etc.) - é só um aviso, não impede marcar agenda nesse dia.</dd>
+          </dl>
+        </div>
+        <div class="calendario" id="calGrade"></div>
+        <p class="sub">Clique num dia pra ver a agenda dele.</p>
+      </section>
+    </section>
+
+    <!-- ===================== Produtos com agenda ===================== -->
+    <section id="painelAgenda" class="painel" hidden>
+      <section class="cartao">
+        <div class="grade-campos">
+          <div class="campo">
+            <label for="agFabricante">Fabricante</label>
+            <select id="agFabricante"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agGrupo">Grupo</label>
+            <select id="agGrupo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agSubgrupo">Subgrupo</label>
+            <select id="agSubgrupo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agBtus">BTUs</label>
+            <select id="agBtus"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agCiclo">Ciclo</label>
+            <select id="agCiclo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agStatus">Status</label>
+            <select id="agStatus"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="agData">Dia</label>
+            <input type="date" id="agData">
+          </div>
+          <div class="campo campo-busca">
+            <label for="agBusca">Buscar (NF, código, descrição ou unificado)</label>
+            <input type="text" id="agBusca" placeholder="ex.: 147136, 110216, inverter, código do conjunto...">
+          </div>
+        </div>
+        <div class="linha-botoes">
+          <span id="agContagem" class="status-inline"></span>
+          <button type="button" class="botao-secundario" id="agLimpar">Limpar filtros</button>
+          <button type="button" class="botao-secundario" id="agExportar">Exportar CSV</button>
+          <button type="button" class="botao-ajuda" data-alvo="ajudaAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+        </div>
+        <div class="painel-ajuda" id="ajudaAgenda" hidden>
+          <dl>
+            <dt>Status</dt>
+            <dd>CONFIRMADO (vai entregar) ou ENTREGUE (já entregou). Quem foi reagendado não aparece aqui com o status antigo - só o agendamento atual conta, pra não duplicar a mesma NF na lista.</dd>
+            <dt>Data</dt>
+            <dd>Data agendada de entrega - não é a data da nota fiscal (essa só aparece na aba "Faturados sem agenda", antes de ganhar uma data aqui).</dd>
+            <dt>NF(s)</dt>
+            <dd>Nota(s) fiscal(is) incluída(s) nesse agendamento.</dd>
+            <dt>Unificado</dt>
+            <dd>Quando esse código é uma peça avulsa que também faz parte de algum conjunto cadastrado, mostra o(s) código(s) do conjunto equivalente.</dd>
+          </dl>
+        </div>
+      </section>
+      <div class="table-wrapper">
+        <table id="tabelaAgenda">
+          <thead>
+            <tr>
+              <th>Status</th><th>Data</th><th>Fabricante</th><th>NF(s)</th>
+              <th>Código</th><th>Descrição</th><th>Grupo</th><th>Subgrupo</th>
+              <th>BTUs</th><th>Ciclo</th><th>Qtd</th><th>Transportadora</th><th>Unificado</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ===================== Faturados sem agenda ===================== -->
+    <section id="painelSemAgenda" class="painel" hidden>
+      <section class="cartao">
+        <div class="grade-campos">
+          <div class="campo">
+            <label for="saFabricante">Fabricante</label>
+            <select id="saFabricante"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="saGrupo">Grupo</label>
+            <select id="saGrupo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="saSubgrupo">Subgrupo</label>
+            <select id="saSubgrupo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="saBtus">BTUs</label>
+            <select id="saBtus"><option value="">Todos</option></select>
+          </div>
+          <div class="campo">
+            <label for="saCiclo">Ciclo</label>
+            <select id="saCiclo"><option value="">Todos</option></select>
+          </div>
+          <div class="campo campo-busca">
+            <label for="saBusca">Buscar (NF, código, descrição ou unificado)</label>
+            <input type="text" id="saBusca" placeholder="ex.: 147136, 110216, código do conjunto...">
+          </div>
+        </div>
+        <div class="linha-botoes">
+          <span id="saContagem" class="status-inline"></span>
+          <button type="button" class="botao-secundario" id="saLimpar">Limpar filtros</button>
+          <button type="button" class="botao-secundario" id="saExportar">Exportar CSV</button>
+          <button type="button" class="botao-ajuda" data-alvo="ajudaSemAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+        </div>
+        <div class="painel-ajuda" id="ajudaSemAgenda" hidden>
+          <dl>
+            <dt>O que é essa aba</dt>
+            <dd>NFs que o fabricante já emitiu, mas que ainda não têm uma data de entrega marcada - assim que ganham data, saem daqui e passam pra "Produtos com agenda".</dd>
+            <dt>Faturamento</dt>
+            <dd>Data de emissão da nota fiscal (não é data de entrega - essa ainda não existe pra essas NFs). O número entre parênteses é há quantos dias isso está esperando agenda.</dd>
+            <dt>Linha amarela / vermelha</dt>
+            <dd>Amarela: esperando agenda há 8 dias ou mais. Vermelha: 16 dias ou mais.</dd>
+            <dt>Unificado</dt>
+            <dd>Quando esse código é uma peça avulsa que também faz parte de algum conjunto cadastrado, mostra o(s) código(s) do conjunto equivalente.</dd>
+          </dl>
+        </div>
+      </section>
+      <div class="table-wrapper">
+        <table id="tabelaSemAgenda">
+          <thead>
+            <tr>
+              <th>Fabricante</th><th>NF</th><th>Código</th><th>Descrição</th>
+              <th>Grupo</th><th>Subgrupo</th><th>BTUs</th><th>Ciclo</th><th>Qtd</th>
+              <th>Faturamento</th><th>Transportadora</th><th>Unificado</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <p class="sub" style="margin-top:40px; font-size:0.8rem;">
+      Última atualização: <span id="ultimaAtualizacao">--</span>
+      &nbsp;·&nbsp;<a href="prazos.html">Prazo das transportadoras</a>
+    </p>
+  </div>
+
+  <script src="csv.js?v=fe269cdd27"></script>
+  <script src="painel.js?v=fe269cdd27"></script>
+</body>
+</html>
