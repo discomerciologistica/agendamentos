@@ -563,4 +563,65 @@
     console.error(erro);
     document.getElementById("ultimaAtualizacao").textContent = "falha ao carregar";
   });
+
+  // ------------------------------------------------- relatório depósito --
+  // relatorio-deposito.bin é o Excel da tela Pendentes CRIPTOGRAFADO
+  // (AES-256-GCM, chave PBKDF2-SHA256 da senha) - o site é estático, então
+  // quem confere a senha é a própria decifragem: senha errada = falha.
+  // Formato e números iguais a build/pendentes.py (criptografa).
+  const linkDeposito = document.getElementById("linkRelatorioDeposito");
+  const formDeposito = document.getElementById("formRelatorioDeposito");
+  const senhaDeposito = document.getElementById("senhaRelatorioDeposito");
+  const statusDeposito = document.getElementById("statusRelatorioDeposito");
+
+  linkDeposito.addEventListener("click", function (ev) {
+    ev.preventDefault();
+    formDeposito.hidden = !formDeposito.hidden;
+    if (!formDeposito.hidden) senhaDeposito.focus();
+  });
+
+  async function decifraRelatorio(bytes, senha) {
+    const magico = new TextDecoder().decode(bytes.slice(0, 4));
+    if (magico !== "DEP1") throw new Error("arquivo inválido");
+    const sal = bytes.slice(4, 20), iv = bytes.slice(20, 32), cifrado = bytes.slice(32);
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(senha), "PBKDF2", false, ["deriveKey"]);
+    const chave = await crypto.subtle.deriveKey(
+      { name: "PBKDF2", salt: sal, iterations: 600000, hash: "SHA-256" },
+      base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+    return crypto.subtle.decrypt({ name: "AES-GCM", iv: iv }, chave, cifrado);
+  }
+
+  formDeposito.addEventListener("submit", async function (ev) {
+    ev.preventDefault();
+    const botao = formDeposito.querySelector("button");
+    botao.disabled = true;
+    statusDeposito.textContent = "Abrindo…";
+    try {
+      const resp = await fetch("relatorio-deposito.bin?v=" + Date.now(), { cache: "no-store" });
+      if (!resp.ok) throw new Error("relatório ainda não publicado");
+      const bytes = new Uint8Array(await resp.arrayBuffer());
+      let xlsx;
+      try {
+        xlsx = await decifraRelatorio(bytes, senhaDeposito.value.trim());
+      } catch (e) {
+        statusDeposito.textContent = "Senha incorreta.";
+        return;
+      }
+      const url = URL.createObjectURL(new Blob([xlsx], {
+        type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }));
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "relatorio-deposito-" + new Date().toISOString().slice(0, 10) + ".xlsx";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+      statusDeposito.textContent = "Baixado.";
+      senhaDeposito.value = "";
+    } catch (e) {
+      statusDeposito.textContent = "Erro: " + e.message;
+    } finally {
+      botao.disabled = false;
+    }
+  });
 })();
