@@ -1354,3 +1354,41 @@ html[data-tema="escuro"] .nav-telas .aba.ativa { background: transparent; color:
 tr.situacao-ok td { background: var(--ok-claro); }
 tr.situacao-alerta td { background: var(--alerta-claro); }
 tr.situacao-critica td { background: var(--perigo-claro); }
+
+/* ===== pop-up de senha do "Relatório depósito" (06/10/2026) ===== */
+.dialogo-senha {
+  width: min(340px, calc(100vw - 32px));
+  padding: 22px 22px 18px;
+  border: 1px solid var(--borda);
+  border-radius: var(--raio);
+  background: var(--superficie);
+  color: var(--tinta);
+  box-shadow: 0 18px 50px rgba(0,0,0,0.25);
+}
+.dialogo-senha::backdrop { background: rgba(0,0,0,0.45); }
+.dialogo-senha h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.dialogo-senha p { margin: 0 0 14px; font-size: 0.88rem; color: var(--tinta-3); }
+.dialogo-senha input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 11px;
+  font-size: 1rem;
+  border: 1px solid var(--borda-forte);
+  border-radius: var(--raio-p);
+  background: var(--superficie);
+  color: var(--tinta);
+}
+.dialogo-senha input:focus { outline: 2px solid var(--acento); outline-offset: 1px; }
+.dialogo-senha .dialogo-status { min-height: 1.2em; margin: 8px 0 12px; font-size: 0.85rem; color: var(--tinta-2); }
+.dialogo-senha .dialogo-status.erro { color: #c0392b; font-weight: 600; }
+.dialogo-botoes { display: flex; justify-content: flex-end; gap: 8px; }
+.dialogo-botoes button {
+  padding: 8px 16px;
+  border-radius: var(--raio-p);
+  font-weight: 600;
+  cursor: pointer;
+}
+.dialogo-principal { background: var(--acento); color: #fff; border: 1px solid var(--acento); }
+.dialogo-principal:hover { background: var(--acento-escuro); }
+.dialogo-principal:disabled { opacity: 0.6; cursor: wait; }
+.dialogo-secundario { background: transparent; color: var(--tinta-2); border: 1px solid var(--borda-forte); }

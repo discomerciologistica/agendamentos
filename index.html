@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGENDAMENTOS</title>
-  <link rel="stylesheet" href="painel.css?v=08cf7c7ffa">
-  <script src="tema.js?v=08cf7c7ffa"></script>
+  <link rel="stylesheet" href="painel.css?v=372a6541a8">
+  <script src="tema.js?v=372a6541a8"></script>
 </head>
 <body>
   <div class="pagina">
@@ -186,16 +186,22 @@
       &nbsp;·&nbsp;<a href="prazos.html">Prazo das transportadoras</a>
       &nbsp;·&nbsp;<a href="#" id="linkRelatorioDeposito">Relatório depósito</a>
     </p>
-    <form id="formRelatorioDeposito" class="sub" style="font-size:0.8rem; margin-top:6px;" hidden>
-      <label for="senhaRelatorioDeposito">Senha:</label>
-      <input type="password" id="senhaRelatorioDeposito" inputmode="numeric" autocomplete="off"
-             style="width:9em; padding:4px 6px; margin:0 6px;">
-      <button type="submit">Baixar</button>
-      <span id="statusRelatorioDeposito" style="margin-left:8px;"></span>
-    </form>
+    <dialog id="dialogoRelatorioDeposito" class="dialogo-senha">
+      <form id="formRelatorioDeposito">
+        <h3>Relatório depósito</h3>
+        <p>Digite a senha para baixar o Excel.</p>
+        <input type="password" id="senhaRelatorioDeposito" inputmode="numeric" autocomplete="off"
+               placeholder="Senha" aria-label="Senha">
+        <p id="statusRelatorioDeposito" class="dialogo-status" role="status"></p>
+        <div class="dialogo-botoes">
+          <button type="button" id="cancelarRelatorioDeposito" class="dialogo-secundario">Cancelar</button>
+          <button type="submit" class="dialogo-principal">Baixar</button>
+        </div>
+      </form>
+    </dialog>
   </div>
 
-  <script src="csv.js?v=08cf7c7ffa"></script>
-  <script src="painel.js?v=08cf7c7ffa"></script>
+  <script src="csv.js?v=372a6541a8"></script>
+  <script src="painel.js?v=372a6541a8"></script>
 </body>
 </html>

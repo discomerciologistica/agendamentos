@@ -570,14 +570,29 @@
   // quem confere a senha é a própria decifragem: senha errada = falha.
   // Formato e números iguais a build/pendentes.py (criptografa).
   const linkDeposito = document.getElementById("linkRelatorioDeposito");
+  const dialogoDeposito = document.getElementById("dialogoRelatorioDeposito");
   const formDeposito = document.getElementById("formRelatorioDeposito");
   const senhaDeposito = document.getElementById("senhaRelatorioDeposito");
   const statusDeposito = document.getElementById("statusRelatorioDeposito");
 
+  function avisoDeposito(texto, erro) {
+    statusDeposito.textContent = texto;
+    statusDeposito.classList.toggle("erro", !!erro);
+  }
+
   linkDeposito.addEventListener("click", function (ev) {
     ev.preventDefault();
-    formDeposito.hidden = !formDeposito.hidden;
-    if (!formDeposito.hidden) senhaDeposito.focus();
+    senhaDeposito.value = "";
+    avisoDeposito("");
+    dialogoDeposito.showModal();
+    senhaDeposito.focus();
+  });
+  document.getElementById("cancelarRelatorioDeposito").addEventListener("click", function () {
+    dialogoDeposito.close();
+  });
+  // clique no fundo escuro (fora da caixa) fecha também
+  dialogoDeposito.addEventListener("click", function (ev) {
+    if (ev.target === dialogoDeposito) dialogoDeposito.close();
   });
 
   async function decifraRelatorio(bytes, senha) {
@@ -595,7 +610,7 @@
     ev.preventDefault();
     const botao = formDeposito.querySelector("button");
     botao.disabled = true;
-    statusDeposito.textContent = "Abrindo…";
+    avisoDeposito("Abrindo…");
     try {
       const resp = await fetch("relatorio-deposito.bin?v=" + Date.now(), { cache: "no-store" });
       if (!resp.ok) throw new Error("relatório ainda não publicado");
@@ -604,7 +619,8 @@
       try {
         xlsx = await decifraRelatorio(bytes, senhaDeposito.value.trim());
       } catch (e) {
-        statusDeposito.textContent = "Senha incorreta.";
+        avisoDeposito("Senha incorreta.", true);
+        senhaDeposito.select();
         return;
       }
       const url = URL.createObjectURL(new Blob([xlsx], {
@@ -616,10 +632,9 @@
       a.click();
       a.remove();
       setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
-      statusDeposito.textContent = "Baixado.";
-      senhaDeposito.value = "";
+      dialogoDeposito.close();
     } catch (e) {
-      statusDeposito.textContent = "Erro: " + e.message;
+      avisoDeposito("Erro: " + e.message, true);
     } finally {
       botao.disabled = false;
     }
