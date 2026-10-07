@@ -40,6 +40,14 @@
     return '<span class="badge badge-st-' + st + '">' + (status || "—") + "</span>";
   }
 
+  // Versao compacta do badge pra tabela "Produtos com agenda" - mesma cor,
+  // so' que uma bolinha em vez do texto, com o status no title (hover/toque).
+  function pontoStatus(status) {
+    const conhecidos = ["CONFIRMADO", "ENTREGUE", "REAGENDADO"];
+    const st = conhecidos.indexOf(status) >= 0 ? status : "OUTRO";
+    return '<span class="ponto-status ponto-status-' + st + '" title="' + (status || "—") + '"></span>';
+  }
+
   function formataBR(iso) {
     if (!iso || !/^\d{4}-\d{2}-\d{2}/.test(String(iso))) return "—";
     const [ano, mes, dia] = String(iso).slice(0, 10).split("-");
@@ -365,10 +373,12 @@
   }
 
   function iniciaAgenda(itensTodos) {
-    // Ultimo agendado primeiro (mais interessa o que mudou mais recente na
-    // agenda); quem nao tem data (raro, deveria ter sempre) vai pro final.
+    // Data mais proxima primeiro (mesma ordem padronizada da tela Agendados
+    // do Lancamento) - e' o que mais interessa no dia a dia: o que vai
+    // entregar primeiro. Quem nao tem data (raro) vai pro final.
     const itens = itensTodos.filter(i => i.agendado).slice().sort((a, b) => {
-      return (b.data || "").localeCompare(a.data || "");
+      const da = a.data || "9999-12-31", db = b.data || "9999-12-31";
+      return da < db ? -1 : da > db ? 1 : 0;
     });
     return iniciaFiltroProdutos({
       itens,
@@ -405,7 +415,7 @@
       linhaHtml: it => {
         const codigo = it.codigo_interno || (it.codigo_fabricante ? "(" + it.codigo_fabricante + ")" : "—");
         return "<tr>" +
-          "<td>" + badge(it.status) + "</td>" +
+          "<td>" + pontoStatus(it.status) + "</td>" +
           "<td>" + formataBR(it.data) + "</td>" +
           "<td>" + (it.fabricante || "—") + "</td>" +
           "<td>" + ((it.nfs || []).join(", ") || "—") + "</td>" +

@@ -81,16 +81,18 @@
             <label for="agData">Dia</label>
             <input type="date" id="agData">
           </div>
+        </div>
+        <div class="linha-busca-acoes">
           <div class="campo campo-busca">
             <label for="agBusca">Buscar (NF, código, descrição ou unificado)</label>
             <input type="text" id="agBusca" placeholder="ex.: 147136, 110216, inverter, código do conjunto...">
           </div>
-        </div>
-        <div class="linha-botoes">
-          <span id="agContagem" class="status-inline"></span>
-          <button type="button" class="botao-secundario" id="agLimpar">Limpar filtros</button>
-          <button type="button" class="botao-secundario" id="agExportar">Exportar CSV</button>
-          <button type="button" class="botao-ajuda" data-alvo="ajudaAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+          <div class="linha-botoes">
+            <span id="agContagem" class="status-inline"></span>
+            <button type="button" class="botao-secundario" id="agLimpar">Limpar filtros</button>
+            <button type="button" class="botao-secundario" id="agExportar">Exportar CSV</button>
+            <button type="button" class="botao-ajuda" data-alvo="ajudaAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+          </div>
         </div>
         <div class="painel-ajuda" id="ajudaAgenda" hidden>
           <dl>
@@ -143,16 +145,18 @@
             <label for="saCiclo">Ciclo</label>
             <select id="saCiclo"><option value="">Todos</option></select>
           </div>
+        </div>
+        <div class="linha-busca-acoes">
           <div class="campo campo-busca">
             <label for="saBusca">Buscar (NF, código, descrição ou unificado)</label>
             <input type="text" id="saBusca" placeholder="ex.: 147136, 110216, código do conjunto...">
           </div>
-        </div>
-        <div class="linha-botoes">
-          <span id="saContagem" class="status-inline"></span>
-          <button type="button" class="botao-secundario" id="saLimpar">Limpar filtros</button>
-          <button type="button" class="botao-secundario" id="saExportar">Exportar CSV</button>
-          <button type="button" class="botao-ajuda" data-alvo="ajudaSemAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+          <div class="linha-botoes">
+            <span id="saContagem" class="status-inline"></span>
+            <button type="button" class="botao-secundario" id="saLimpar">Limpar filtros</button>
+            <button type="button" class="botao-secundario" id="saExportar">Exportar CSV</button>
+            <button type="button" class="botao-ajuda" data-alvo="ajudaSemAgenda" aria-expanded="false" title="O que significa cada coluna">?</button>
+          </div>
         </div>
         <div class="painel-ajuda" id="ajudaSemAgenda" hidden>
           <dl>
