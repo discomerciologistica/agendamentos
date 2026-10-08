@@ -695,7 +695,8 @@
 
   formDeposito.addEventListener("submit", async function (ev) {
     ev.preventDefault();
-    const botao = formDeposito.querySelector("button");
+    // ".dialogo-principal" = "Baixar" (o 1o <button> do form e' o Cancelar).
+    const botao = formDeposito.querySelector(".dialogo-principal");
     botao.disabled = true;
     avisoDeposito("Abrindo…");
     try {
@@ -712,14 +713,20 @@
       }
       const url = URL.createObjectURL(new Blob([xlsx], {
         type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" }));
-      const a = document.createElement("a");
-      a.href = url;
-      a.download = "relatorio-deposito-" + new Date().toISOString().slice(0, 10) + ".xlsx";
-      document.body.appendChild(a);
-      a.click();
-      a.remove();
-      setTimeout(function () { URL.revokeObjectURL(url); }, 10000);
+      // Fecha o modal ANTES do download: com ele aberto, a janela "Salvar
+      // como" do Windows abria por cima e o cursor do mouse sumia (relato do
+      // usuario, 08/10/2026).
+      senhaDeposito.blur();
       dialogoDeposito.close();
+      setTimeout(function () {
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "relatorio-deposito-" + new Date().toISOString().slice(0, 10) + ".xlsx";
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 60000);
+      }, 150);
     } catch (e) {
       avisoDeposito("Erro: " + e.message, true);
     } finally {
