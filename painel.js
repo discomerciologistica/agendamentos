@@ -84,10 +84,9 @@
     return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
   }
 
-  // Campo interno ainda se chama "coleta", mas o valor e' a data de
-  // FATURAMENTO (emissao da NF) - a coleta fisica acontece uns 1-2 dias
-  // depois, por isso a tela mostra "Faturamento" (pedido do usuario,
-  // 01/10/2026). Vem em dd/mm/aa.
+  // Data de COLETA: o padrao e' o faturamento (emissao da NF), mas o
+  // Lancamento pode corrigir. A Consulta mostra so' a coleta (pedido do
+  // usuario, 08/10/2026). Vem em dd/mm/aa.
   function parseColetaBR(str) {
     const m = /^(\d{2})\/(\d{2})\/(\d{2})$/.exec(str || "");
     if (!m) return null;
@@ -505,7 +504,7 @@
       },
       csv: {
         nomeBase: "faturados_sem_agenda",
-        cabecalho: ["FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "FATURAMENTO", "TRANSPORTADORA", "UNIFICADO"],
+        cabecalho: ["FABRICANTE", "NFS", "CÓDIGO", "DESCRIÇÃO", "GRUPO", "SUBGRUPO", "BTUS", "CICLO", "QTD", "COLETA", "TRANSPORTADORA", "UNIFICADO"],
         linha: it => [it.fabricante, (it.nfs || []).join(" "), it.codigo_interno || it.codigo_fabricante,
           it.descricao, nomeGrupo(it.grupo), nomeSubgrupo(it.subgrupo), it.btus, nomeCiclo(it.ciclo), it.qtd,
           it.coleta, it.transportadora, it.unificado_codigo],
@@ -616,7 +615,7 @@
       const nfs = (ev.nfs || []).join(", ") || "sem NF ainda";
       let data = "";
       if (ev.tipo === "REAGENDADO") data = formataBR(ev.data_anterior) + " → " + formataBR(ev.data);
-      else if (ev.tipo === "SEM_AGENDA" && ev.data) data = "faturada " + formataBR(ev.data);
+      else if (ev.tipo === "SEM_AGENDA" && ev.data) data = "coleta " + formataBR(ev.data);
       else if (ev.data) data = formataBR(ev.data);
       const extras = [data, ev.veiculos ? ev.veiculos + " veíc." : "", ev.transportadora || ""]
         .filter(Boolean).map(esc).join(" · ");

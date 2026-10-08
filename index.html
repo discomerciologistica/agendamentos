@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGENDAMENTOS</title>
-  <link rel="stylesheet" href="painel.css?v=b57e9449b2">
-  <script src="tema.js?v=b57e9449b2"></script>
+  <link rel="stylesheet" href="painel.css?v=331595875a">
+  <script src="tema.js?v=331595875a"></script>
 </head>
 <body>
   <div class="pagina">
@@ -101,7 +101,7 @@
             <dt>Status</dt>
             <dd>CONFIRMADO (vai entregar) ou ENTREGUE (já entregou). Quem foi reagendado não aparece aqui com o status antigo - só o agendamento atual conta, pra não duplicar a mesma NF na lista.</dd>
             <dt>Data</dt>
-            <dd>Data agendada de entrega - não é a data da nota fiscal (essa só aparece na aba "Faturados sem agenda", antes de ganhar uma data aqui).</dd>
+            <dd>Data agendada de entrega - não é a data de coleta (essa só aparece na aba "Faturados sem agenda", antes de ganhar uma data aqui).</dd>
             <dt>NF(s)</dt>
             <dd>Nota(s) fiscal(is) incluída(s) nesse agendamento.</dd>
             <dt>Unificado</dt>
@@ -164,8 +164,8 @@
           <dl>
             <dt>O que é essa aba</dt>
             <dd>NFs que o fabricante já emitiu, mas que ainda não têm uma data de entrega marcada - assim que ganham data, saem daqui e passam pra "Produtos com agenda".</dd>
-            <dt>Faturamento</dt>
-            <dd>Data de emissão da nota fiscal (não é data de entrega - essa ainda não existe pra essas NFs). O número entre parênteses é há quantos dias isso está esperando agenda.</dd>
+            <dt>Coleta</dt>
+            <dd>Data em que a carga foi (ou vai ser) coletada pela transportadora (não é data de entrega - essa ainda não existe pra essas NFs). O número entre parênteses é há quantos dias isso está esperando agenda.</dd>
             <dt>Linha amarela / vermelha</dt>
             <dd>Amarela: esperando agenda há 8 dias ou mais. Vermelha: 16 dias ou mais.</dd>
             <dt>Unificado</dt>
@@ -179,7 +179,7 @@
             <tr>
               <th>Fabricante</th><th>NF</th><th>Código</th><th>Descrição</th>
               <th>Grupo</th><th>Subgrupo</th><th>BTUs</th><th>Ciclo</th><th>Qtd</th>
-              <th>Faturamento</th><th>Transportadora</th><th>Unificado</th>
+              <th>Coleta</th><th>Transportadora</th><th>Unificado</th>
             </tr>
           </thead>
           <tbody></tbody>
@@ -214,7 +214,7 @@
     </dialog>
   </div>
 
-  <script src="csv.js?v=b57e9449b2"></script>
-  <script src="painel.js?v=b57e9449b2"></script>
+  <script src="csv.js?v=331595875a"></script>
+  <script src="painel.js?v=331595875a"></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRAZO DAS TRANSPORTADORAS</title>
-    <link rel="stylesheet" href="painel.css?v=b57e9449b2">
-    <script src="tema.js?v=b57e9449b2"></script>
+    <link rel="stylesheet" href="painel.css?v=331595875a">
+    <script src="tema.js?v=331595875a"></script>
 </head>
 <body>
   <div class="pagina">
@@ -14,16 +14,16 @@
     </nav>
 
     <h1>Prazo das transportadoras</h1>
-    <p class="sub">Prazo realizado (emissão → entrega) e notas faturadas que ainda não foram entregues, por transportadora.</p>
+    <p class="sub">Prazo realizado (coleta → entrega) e notas faturadas que ainda não foram entregues, por transportadora.</p>
 
     <section class="cartao">
-      <h2>Prazo realizado, da emissão à entrega
+      <h2>Prazo realizado, da coleta à entrega
         <button type="button" class="botao-ajuda" data-alvo="ajudaResumo" aria-expanded="false" title="O que significa cada coluna">?</button>
       </h2>
       <div class="painel-ajuda" id="ajudaResumo" hidden>
         <dl>
           <dt>Como é calculado</dt>
-          <dd>Média de dias entre a emissão da nota e a entrega confirmada, por transportadora + fabricante, só considerando entregas dos últimos 3 meses e frete FOB (quando a empresa contratou a transportadora - em CIF quem contrata é o fabricante, então não faz sentido medir do nosso lado).</dd>
+          <dd>Média de dias entre a coleta e a entrega confirmada, por transportadora + fabricante, só considerando entregas dos últimos 3 meses e frete FOB (quando a empresa contratou a transportadora - em CIF quem contrata é o fabricante, então não faz sentido medir do nosso lado).</dd>
           <dt>MEDIA / MEDIANA / P90 / MAXIMO</dt>
           <dd>Estatísticas em dias desse grupo de NFs: média simples, valor do meio (mediana), 90% das entregas aconteceram até esse prazo (P90), e o maior prazo já visto (máximo).</dd>
         </dl>
@@ -42,10 +42,10 @@
       </h2>
       <div class="painel-ajuda" id="ajudaAbertas" hidden>
         <dl>
-          <dt>FATURAMENTO</dt>
-          <dd>Data de emissão da nota fiscal - ainda não tem data de entrega marcada.</dd>
+          <dt>COLETA</dt>
+          <dd>Data em que a transportadora coletou a carga - ainda não tem data de entrega marcada.</dd>
           <dt>DIAS</dt>
-          <dd>Quantos dias já se passaram desde a emissão até hoje.</dd>
+          <dd>Quantos dias já se passaram desde a coleta até hoje.</dd>
           <dt>PRAZO MEDIO</dt>
           <dd>Média histórica (últimos 3 meses) daquela transportadora + fabricante, pra comparar com os DIAS atuais. Fica em branco quando ainda não há dado suficiente.</dd>
           <dt>SITUACAO</dt>
@@ -70,7 +70,7 @@
     <p class="sub" style="margin-top:32px; font-size:0.8rem;">Última atualização: <span id="ultimaAtualizacao">--</span></p>
   </div>
 
-  <script src="csv.js?v=b57e9449b2"></script>
+  <script src="csv.js?v=331595875a"></script>
   <script>
     // Botoes "?" que explicam as colunas de cada tabela - mesmo padrao do
     // index.html/painel.js, repetido aqui porque esta pagina nao carrega
