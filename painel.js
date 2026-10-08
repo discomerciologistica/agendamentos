@@ -574,6 +574,84 @@
     document.getElementById("ultimaAtualizacao").textContent = "falha ao carregar";
   });
 
+  // ----------------------------------------------------- últimas edições --
+  // Bandeira na aba Calendário: as últimas 20 edições (ENTREGUE, agendado,
+  // faturado sem agenda, reagendado, cancelado) vindas de ultimas_edicoes.json,
+  // gerado pela tela de Lançamento junto com o resto (servidor.py). O número
+  // na bandeira conta o que entrou desde a última vez que ESTE navegador
+  // abriu a lista (localStorage - só conveniência, sem ele mostra tudo como novo).
+  const TITULOS_EDICAO = {
+    ENTREGUE: "Entregue", AGENDADO: "Novo agendamento", SEM_AGENDA: "Faturado sem agenda",
+    REAGENDADO: "Reagendado", CANCELADO: "Cancelado", REVERTIDO: "Agenda desfeita",
+  };
+  const btnEdicoes = document.getElementById("btnEdicoes");
+  const dialogoEdicoes = document.getElementById("dialogoEdicoes");
+  const contadorEdicoes = document.getElementById("edicoesNovas");
+  let edicoes = [];
+
+  function lerVisto() {
+    try { return localStorage.getItem("edicoesVistasAte") || ""; } catch (e) { return ""; }
+  }
+  function marcarVisto(em) {
+    try { localStorage.setItem("edicoesVistasAte", em); } catch (e) { /* sem storage, segue */ }
+  }
+  function esc(s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  }
+  function quandoBR(em) {
+    // "2026-10-08T14:32:05" -> "08/10 14:32"
+    return em ? em.slice(8, 10) + "/" + em.slice(5, 7) + " " + em.slice(11, 16) : "";
+  }
+
+  function renderEdicoes() {
+    const visto = lerVisto();
+    const lista = document.getElementById("listaEdicoes");
+    if (!edicoes.length) {
+      lista.innerHTML = '<li class="edicoes-vazio">Nenhuma edição registrada ainda.</li>';
+      return;
+    }
+    lista.innerHTML = edicoes.map(function (ev) {
+      const nfs = (ev.nfs || []).join(", ") || "sem NF ainda";
+      let data = "";
+      if (ev.tipo === "REAGENDADO") data = formataBR(ev.data_anterior) + " → " + formataBR(ev.data);
+      else if (ev.tipo === "SEM_AGENDA" && ev.data) data = "faturada " + formataBR(ev.data);
+      else if (ev.data) data = formataBR(ev.data);
+      const extras = [data, ev.veiculos ? ev.veiculos + " veíc." : "", ev.transportadora || ""]
+        .filter(Boolean).map(esc).join(" · ");
+      return '<li class="edicao' + (ev.em > visto ? " nova" : "") + '">' +
+        '<span class="edicao-tipo tipo-' + esc(ev.tipo) + '">' + esc(TITULOS_EDICAO[ev.tipo] || ev.tipo) + "</span>" +
+        '<span class="edicao-quando">' + esc(quandoBR(ev.em)) + "</span>" +
+        '<span class="edicao-desc"><strong>' + esc(ev.fabricante) + "</strong> NF " + esc(nfs) +
+        (extras ? '<span class="edicao-extra">' + extras + "</span>" : "") + "</span></li>";
+    }).join("");
+  }
+
+  function atualizaContador() {
+    const visto = lerVisto();
+    const novas = edicoes.filter(function (ev) { return ev.em > visto; }).length;
+    contadorEdicoes.hidden = !novas;
+    contadorEdicoes.textContent = novas;
+    btnEdicoes.classList.toggle("tem-novas", !!novas);
+  }
+
+  fetch("ultimas_edicoes.json?v=" + Date.now(), { cache: "no-store" })
+    .then(function (r) { return r.ok ? r.json() : { eventos: [] }; })
+    .then(function (j) { edicoes = j.eventos || []; atualizaContador(); })
+    .catch(function () { /* arquivo ainda não publicado: bandeira sem número */ });
+
+  btnEdicoes.addEventListener("click", function () {
+    renderEdicoes();
+    dialogoEdicoes.showModal();
+    if (edicoes.length) marcarVisto(edicoes[0].em);
+    atualizaContador();
+  });
+  document.getElementById("fecharEdicoes").addEventListener("click", function () { dialogoEdicoes.close(); });
+  dialogoEdicoes.addEventListener("click", function (ev) {
+    if (ev.target === dialogoEdicoes) dialogoEdicoes.close();
+  });
+
   // ------------------------------------------------- relatório depósito --
   // relatorio-deposito.bin é o Excel da tela Pendentes CRIPTOGRAFADO
   // (AES-256-GCM, chave PBKDF2-SHA256 da senha) - o site é estático, então

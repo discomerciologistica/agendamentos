@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AGENDAMENTOS</title>
-  <link rel="stylesheet" href="painel.css?v=6bc3695ae7">
-  <script src="tema.js?v=6bc3695ae7"></script>
+  <link rel="stylesheet" href="painel.css?v=b57e9449b2">
+  <script src="tema.js?v=b57e9449b2"></script>
 </head>
 <body>
   <div class="pagina">
@@ -15,7 +15,9 @@
       <button type="button" class="aba" data-aba="sem-agenda">Faturados sem agenda</button>
     </nav>
 
-    <h1>Agendamentos</h1>
+    <h1 class="titulo-com-edicoes"><span>Agendamentos</span>
+      <button type="button" class="botao-edicoes" id="btnEdicoes" title="Últimas edições" aria-label="Últimas edições">⚑<span class="edicoes-novas" id="edicoesNovas" hidden></span></button>
+    </h1>
     <p class="sub">Consulta - calendário de cargas, itens já agendados e notas faturadas aguardando data. Só consulta, não dá pra editar por aqui.</p>
 
     <div class="resumo-topo" id="resumoTopo"></div>
@@ -190,6 +192,13 @@
       &nbsp;·&nbsp;<a href="prazos.html">Prazo das transportadoras</a>
       &nbsp;·&nbsp;<a href="#" id="linkRelatorioDeposito">Relatório depósito</a>
     </p>
+    <dialog id="dialogoEdicoes" class="dialogo-senha dialogo-edicoes" aria-labelledby="tituloEdicoes">
+      <div class="edicoes-topo">
+        <h3 id="tituloEdicoes">Últimas edições</h3>
+        <button type="button" class="modal-fechar" id="fecharEdicoes" aria-label="Fechar">×</button>
+      </div>
+      <ol class="edicoes-lista" id="listaEdicoes"></ol>
+    </dialog>
     <dialog id="dialogoRelatorioDeposito" class="dialogo-senha">
       <form id="formRelatorioDeposito">
         <h3>Relatório depósito</h3>
@@ -205,7 +214,7 @@
     </dialog>
   </div>
 
-  <script src="csv.js?v=6bc3695ae7"></script>
-  <script src="painel.js?v=6bc3695ae7"></script>
+  <script src="csv.js?v=b57e9449b2"></script>
+  <script src="painel.js?v=b57e9449b2"></script>
 </body>
 </html>

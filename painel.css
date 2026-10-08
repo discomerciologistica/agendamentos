@@ -1425,3 +1425,53 @@ tr.situacao-critica td { background: var(--perigo-claro); }
 .dialogo-principal:hover { background: var(--acento-escuro); }
 .dialogo-principal:disabled { opacity: 0.6; cursor: wait; }
 .dialogo-secundario { background: transparent; color: var(--tinta-2); border: 1px solid var(--borda-forte); }
+
+/* ---------- Bandeira "últimas edições" (aba Calendário) ---------- */
+/* Mora dentro do <h1> (alinhado a direita) - pedido do usuario: mais em
+   evidencia que no cabecalho do calendario, cor chamativa e maior. */
+.pagina > h1.titulo-com-edicoes { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.botao-edicoes,
+html[data-tema="escuro"] .botao-edicoes {
+  position: relative; flex: none;
+  width: 48px; height: 48px; padding: 0;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: "Segoe UI Symbol", "Segoe UI", system-ui, sans-serif;
+  font-size: 1.5rem; font-weight: 400; line-height: 1;
+  color: #fff; background: #e8590c; border: 0; border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(232, 89, 12, 0.35);
+  cursor: pointer; transition: transform .12s, background .12s;
+}
+.botao-edicoes:hover,
+html[data-tema="escuro"] .botao-edicoes:hover { background: #c94a06; transform: translateY(-1px); }
+.botao-edicoes.tem-novas { animation: edicoes-pulso 1.6s ease-out 3; }
+@keyframes edicoes-pulso {
+  0% { box-shadow: 0 0 0 0 rgba(232, 89, 12, 0.55); }
+  100% { box-shadow: 0 0 0 14px rgba(232, 89, 12, 0); }
+}
+.edicoes-novas {
+  position: absolute; top: -8px; right: -8px;
+  min-width: 22px; height: 22px; padding: 0 6px; box-sizing: border-box;
+  border-radius: 11px; background: #fff; color: #c92a2a; border: 2px solid #c92a2a;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 0.75rem; font-weight: 800; line-height: 18px; text-align: center;
+}
+@media print { .botao-edicoes { display: none; } }
+.dialogo-edicoes { width: min(560px, calc(100vw - 32px)); max-height: calc(100vh - 64px); padding: 0; }
+.dialogo-edicoes[open] { display: flex; flex-direction: column; }
+.edicoes-topo { display: flex; align-items: center; justify-content: space-between; padding: 14px 18px; border-bottom: 1px solid var(--borda); }
+.edicoes-topo h3 { margin: 0; }
+.edicoes-lista { list-style: none; margin: 0; padding: 6px 0; overflow-y: auto; }
+.edicao {
+  display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; align-items: baseline;
+  padding: 9px 18px; border-bottom: 1px solid var(--borda); font-size: 0.88rem;
+}
+.edicao:last-child { border-bottom: 0; }
+.edicao.nova { background: var(--acento-claro); }
+.edicao-tipo { font-weight: 700; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.03em; color: var(--tinta-2); }
+.edicao-tipo.tipo-ENTREGUE { color: var(--ok); }
+.edicao-tipo.tipo-CANCELADO, .edicao-tipo.tipo-REVERTIDO { color: var(--perigo); }
+.edicao-tipo.tipo-REAGENDADO, .edicao-tipo.tipo-SEM_AGENDA { color: var(--alerta); }
+.edicao-quando { justify-self: end; font-size: 0.78rem; color: var(--tinta-3); font-variant-numeric: tabular-nums; }
+.edicao-desc { grid-column: 1 / -1; color: var(--tinta); }
+.edicao-extra { display: block; color: var(--tinta-3); font-size: 0.82rem; }
+.edicoes-vazio { padding: 18px; color: var(--tinta-3); }
