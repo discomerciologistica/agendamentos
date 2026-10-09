@@ -71,6 +71,10 @@
   function nomeGrupo(c) { return NOMES_GRUPO[c] || c || ""; }
   function nomeSubgrupo(c) { return NOMES_SUBGRUPO[c] || c || ""; }
   function nomeCiclo(c) { return NOMES_CICLO[c] || c || ""; }
+  function primeiraMaiuscula(s) {
+    s = String(s || "");
+    return s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+  }
 
   // Campo interno ainda se chama "coleta", mas o valor e' a data de
   // FATURAMENTO (emissao da NF) - a coleta fisica acontece uns 1-2 dias
@@ -236,7 +240,7 @@
     const atual = select.value;
     select.innerHTML = '<option value="">Todos</option>' +
       '<option value="NAO_ENTREGUE">Não entregue</option>' +
-      '<option value="ENTREGUE">ENTREGUE</option>';
+      '<option value="ENTREGUE">Entregue</option>';
     if (["", "NAO_ENTREGUE", "ENTREGUE"].indexOf(atual) >= 0) select.value = atual;
   }
 
@@ -285,7 +289,7 @@
     }
 
     function preencheFiltros() {
-      opcoes(cfg.selFabricante, distintos(cfg.itens, "fabricante"));
+      opcoes(cfg.selFabricante, distintos(cfg.itens, "fabricante"), primeiraMaiuscula);
       opcoes(cfg.selGrupo, distintos(cfg.itens, "grupo"), nomeGrupo);
       opcoes(cfg.selSubgrupo, distintos(cfg.itens, "subgrupo"), nomeSubgrupo);
       opcoes(cfg.selBtus, distintos(cfg.itens, "btus", true));
