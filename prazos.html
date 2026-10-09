@@ -117,11 +117,51 @@
       return tbody;
     }
 
+    // Clique no cabecalho ordena a tabela por aquela coluna (clicar de novo
+    // inverte) - mesmo visual (th.ordenavel / data-ordem) das tabelas do
+    // painel.js. Ordena as <tr> ja montadas, entao a busca (que so' esconde
+    // linhas) continua valendo. Vazio vai sempre pro fim.
+    function chaveOrdem(texto) {
+      const t = texto.trim();
+      if (!t) return null;
+      const data = /^(\d{2})\/(\d{2})\/(\d{2,4})$/.exec(t);
+      if (data) return Number((data[3].length === 2 ? "20" + data[3] : data[3]) + data[2] + data[1]);
+      if (/^-?\d+([.,]\d+)?$/.test(t)) return Number(t.replace(",", "."));
+      return t;
+    }
+
+    function tornaOrdenavel(idCabecalho, idCorpo) {
+      const ths = document.querySelectorAll("#" + idCabecalho + " th");
+      const tbody = document.getElementById(idCorpo);
+      let ordem = null; // { indice, dir: 1|-1 }
+      ths.forEach((th, i) => {
+        th.classList.add("ordenavel");
+        th.addEventListener("click", () => {
+          ordem = (ordem && ordem.indice === i) ? { indice: i, dir: -ordem.dir } : { indice: i, dir: 1 };
+          ths.forEach(t => t.removeAttribute("data-ordem"));
+          th.setAttribute("data-ordem", ordem.dir === 1 ? "asc" : "desc");
+          const linhas = Array.from(tbody.rows);
+          linhas.sort((a, b) => {
+            const va = chaveOrdem(a.cells[i] ? a.cells[i].textContent : "");
+            const vb = chaveOrdem(b.cells[i] ? b.cells[i].textContent : "");
+            if (va === null || vb === null) return (va === null) - (vb === null);
+            const cmp = (typeof va === "number" && typeof vb === "number")
+              ? va - vb
+              : String(va).localeCompare(String(vb), "pt-BR", { numeric: true, sensitivity: "base" });
+            return ordem.dir * cmp;
+          });
+          linhas.forEach(tr => tbody.appendChild(tr));
+        });
+      });
+    }
+
     Promise.all([carregarCSV("prazos_resumo.csv"), carregarCSV("prazos.csv")])
       .then(([resumo, abertas]) => {
         preenche("resumoHeader", "resumoBody", resumo.cabecalho, resumo.linhas);
         const tbody = preenche("abertasHeader", "abertasBody",
                                abertas.cabecalho, abertas.linhas, abertas.cabecalho.indexOf("SITUACAO"));
+        tornaOrdenavel("resumoHeader", "resumoBody");
+        tornaOrdenavel("abertasHeader", "abertasBody");
 
         const titulo = document.getElementById("tituloAbertas");
         titulo.textContent = `${abertas.linhas.length} NF(s) em aberto`;
