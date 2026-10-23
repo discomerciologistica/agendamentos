@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Sistema de Agendamentos - novo endereço</title>
+  <style>
+    :root {
+      --fundo: #f4f5f7; --cartao: #ffffff; --tinta: #1d1f23; --tinta2: #555b65;
+      --borda: #dde0e5; --acento: #2f4fa3; --acento-fundo: #eef2fb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fundo: #15171b; --cartao: #1f2228; --tinta: #e8eaed; --tinta2: #a2a8b2;
+        --borda: #353a43; --acento: #8fa8ec; --acento-fundo: #232a3d;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
+      background: var(--fundo); color: var(--tinta);
+      font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    main {
+      width: 100%; max-width: 560px; background: var(--cartao);
+      border: 1px solid var(--borda); border-radius: 14px; padding: 32px 28px;
+    }
+    h1 { font-size: 1.6rem; margin: 0 0 8px; }
+    h2 { font-size: 1.05rem; font-weight: 500; color: var(--tinta2); margin: 0 0 24px; }
+    h3 { font-size: 1rem; margin: 0 0 8px; }
+    ol { margin: 0 0 28px; padding-left: 1.3em; }
+    li { margin: 4px 0; }
+    .endereco {
+      background: var(--acento-fundo); border-radius: 10px; padding: 18px 20px; text-align: center;
+    }
+    .endereco p {
+      margin: 0 0 6px; font-size: .8rem; font-weight: 700; letter-spacing: .08em; color: var(--tinta2);
+    }
+    .endereco a {
+      color: var(--acento); font-weight: 600; font-size: 1.1rem; word-break: break-all;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Sistema de Agendamentos</h1>
+    <h2>O sistema de agendamentos está disponível em um novo endereço.</h2>
+
+    <h3>Como acessar:</h3>
+    <ol>
+      <li>Acesse o novo endereço do sistema.</li>
+      <li>Faça o login com seu usuário e senha do sistema.</li>
+    </ol>
+
+    <div class="endereco">
+      <p>NOVO ENDEREÇO</p>
+      <a href="https://logistica-agendamentos.discomercio.com.br">https://logistica-agendamentos.discomercio.com.br</a>
+    </div>
+  </main>
+</body>
+</html>
